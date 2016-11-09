@@ -5,7 +5,6 @@ var express     = require('express');
 var app         = express();
 var bodyParser  = require('body-parser');
 var mongoose    = require('mongoose');
-var multer 		= require('multer');
 var path = require('path'); //main 페이지 설정 index.html
 // [ CONFIGURE mongoose ]
 
@@ -34,7 +33,8 @@ var port = process.env.PORT || 7000;
 
 // [CONFIGURE ROUTER]
 var user_Router = require('./routes/user')(app,User);
-var user_View = require('./routes/view')(app,View);
+var view_Router = require('./routes/view')(app,View);
+var upload_Router = require('./routes/upload.js')(app);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)
