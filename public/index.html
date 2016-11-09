@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/angular-slick/dist/slick.js"></script>
+	<script src="js/slick-carousel/slick/slick.js"></script>
+	<link rel="stylesheet" href="css/slick.css"/>
+  	<link rel="stylesheet" href="css/slick-theme.css"/> <!-- slick 적용 -->		
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+  	<link rel="stylesheet" href="css/animate.css"/>
+
+  	<script src="controller/route.js"></script> <!--script controller 적용-->
+  	<script src='controller/main_img.js'></script>
+	<script src='controller/wedding.js'></script>
+	<script src='controller/review.js'></script>
+	<script src='controller/photo.js'></script>
+	<script src='controller/catalog.js'></script>
+ 	
+ 	<!--외부 css 적용-->
+	<link rel="stylesheet" href="css_each/catalog.css"/><!-- catalog 영역 css -->
+	<link rel="stylesheet" href="css_each/place.css"/> <!-- 전체 영역 css -->
+	<meta charset="UTF-8">
+	<title>index.html</title>
+</head>
+<body>
+<div class="dim" ng-controller="dim" ng-click="dim()"></div>
+<div class="total_wrap">
+	<div class="catalog" ng-controller="catalog">
+		<div class=logo>
+			<ul class="catal_icon">
+				<li><a href="http://www.kakao.com/"><img src="images/kakao_icon.png"></a></li>
+				<li><a href="http://www.facebook.com/nellpleto"><img src="images/facebook_icon.png"></a></li>
+				<li><a href="http://www.instagram.com/chaohreum_park"><img src="images/instram_icon.png"></a></li>
+			</ul>
+			<span class="animated bounce">Or Studio</span>
+			<div class="menu_Btn">
+				<button ng-click="catal_View()">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+			</div>
+		</div>
+		<div class=main_Catal> 
+			<ul ng-click>	
+				<li><a href="#main">MAIN</a></li>
+				<li><a href="#wedding">WEDDING</a></li>
+				<li><a href="#review">REVIEW</a></li> 
+				<li><a href="#photo">PHOTO</a></li> 
+				<li><a href="">Q & A</a></li> 
+			</ul>
+		</div> 
+		<div class="response_Menu animate" view="false">
+			<div class="response_SubMenu">
+			<p class="glyphicon glyphicon-arrow-left" ng-click='menu_click()'></p>
+				<ul>	
+					<li ng-click="menu_click()"><a href="#main">MAIN</a></li>
+					<li ng-click="menu_click()"><a href="#wedding">WEDDING</a></li>
+					<li ng-click="menu_click()"><a href="#review">REVIEW</a></li> 
+					<li ng-click="menu_click()"><a href="#photo">PHOTO</a></li> 
+					<li ng-click="menu_click()"><a href="">Q &amp; A</a></li> 
+				</ul>
+			</div>
+			<div class="response_SubIcon">
+				<p>이름: 박차오름</p>
+				<p>카톡문의 : park4499</p>
+				<p>e-mail문의: nellpleto@naver.com</p>
+				<div class="icon_Left">
+					<a href="http://www.kakao.com/"><img src="images/kakao_icon.png"></a>
+				</div>
+				<div>
+					<a href="http://www.facebook.com/nellpleto"><img src="images/facebook_icon.png"></a>
+				</div>
+				<div>
+					<a href="http://www.instagram.com/chaohreum_park"><img src="images/instram_icon.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-view></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="default"></div>
+<div class="review" ng-controller="review" data-ng-init="load()">
+	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index"> 
+		<div class="review_Img">
+			<img src="{{tmp.img}}"/>
+		</div>
+		<div class="review_Txt">
+			<strong><center><p>PROFILE</p></strong><p>{{tmp.name}}</p><p>{{tmp.age}}</p><p>{{tmp.content}}</p></center>
+		</div>
+	</div>
+	<button class="btn btn-default review_WriteBtn" data-toggle="modal" data-target="#viewWrite">글쓰기</button>
+	<div id="viewWrite" class="modal"> <!--글쓰기 버튼 클릭시 modal 창 으로 보여주기 -->
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button> <!-- 닫기 X 버튼 -->
+					<center><h3>VIEW 글 등록 </h3></center>
+				</div>
+				<div class="modal-body">
+					<form action="/viewWrite" method="post" ng-submit="viewWriteForm($event)" >
+						<div class="form-group">
+							<label for="name" class="sr-only">이름</label>
+							<input type="text"	ng-model="viewDate.name"  id="name" name="name" placeholder="이름 입력:" class="form-control"/><br/>
+							<label for="age" class="sr-only">나이</label>
+							<input type="text" ng-model="viewDate.age"  id="age" name="age" placeholder="나이 입력:" class="form-control"/><br/>
+							<label for="img" class="sr-only">이미지</label>
+							<input type="text" ng-model="viewDate.img"  id="img" name="img" class="form-control"/>
+							<label for="content" class="sr-only">내용</label><br/>
+							<textarea ng-model="viewDate.content"  name="content" id="content" cols="78" rows="10" class="form-control" style="resize:none;">	
+							</textarea>
+							<button class="btn btn-success" type="submit">등록</button>
+							<button class="btn btn-danger" data-dismiss="modal">취소</button>
+						</div>
+					</form>			
+				</div>
+			</div>
+		</div>
+	</div> <!--글쓰기 버튼 클릭시 modal 창 으로 보여주기 끝 -->
+</div>

@@ -1,0 +1,50 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.dim{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:1600px;
+	background-color:black;
+	opacity: 0.7;
+	z-index: 1000;
+	display:none;
+}
+img{
+	width:100%;
+	height:100%;
+}
+.total_wrap{
+	height:;
+}
+.catalog{                  /* 카탈로그 영역 */
+	position:absolute;
+	top:0;
+	height:150px;
+	width: 100%;
+	z-index:10000;
+} 
+.wedding{          /* wedding 영역*/
+	float:left;
+	width: 100%;
+	cursor:pointer;
+}
+.review{            /*review 영역*/
+	float:left;
+	margin-top:55px;
+	width: 100%;
+}
+.photo{
+	float:left;
+	width:100%;
+}
+.footer{
+	float: left;
+	margin-top:50px;
+	width:100%;
+	height:100px;
+	background-color:darkgrey;
+}

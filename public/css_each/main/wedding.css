@@ -1,0 +1,112 @@
+.weddingTxt{      /*wedding text */
+	clear:both;
+	width:100%;
+	font-size:25px;
+	padding:5px 15px;
+	color:white;
+	background-color:black;
+	opacity:0.8;
+	z-index:1000;
+}
+.wrap_Wedding{      /* position absolute를하기위해 relative 로 감쌈*/
+	position:relative;
+	width:100%;
+	height:100%;
+	/* overflow:hidden; */
+}
+	.weddingImgBox_1{          /* 첫번째 이미지 박스 */
+		position:absolute;
+		top:0;
+		width:60%;
+		height:100%;
+		background-color: white;
+	}
+	.weddingImgBox_2{	 /* 두번째 이미지 박스 */
+		position: absolute;
+		top:0;
+		left:20%;
+		width:60%;
+		height:100%;
+		background-color: white;
+	}
+	.weddingImgBox_3{	 /* 세번째 이미지 박스 */
+		position: absolute;
+		top:0;
+		left:40%;
+		width:60%;
+		height:100%;
+		background-color: white;
+	}
+		.wdImgBox_1{    /*각 box 에 들어가는 이미지 1*/
+			float:left;
+			width:34%;
+			height:50%;
+		}
+		.wdImgBox_2{	/*각 box 에 들어가는 이미지 2*/
+		 	float:left;
+			width:66%;
+			height:100%;
+		} 
+		.wdImgBox_3{	/*각 box 에 들어가는 이미지 3*/
+			position: relative;
+			top:50%;
+			width:34%;
+			height:50%;
+		}
+		.wdImgBox_3 img{
+			position: relative;
+			top:-200%;
+		}
+/*반응형 css*/
+@media(max-width:768px){          /* 768 이하 적용*/
+	.wedding{
+		height:250px;
+	}
+	.wrap_Wedding{
+
+	}
+	.weddingImgBox_1{
+		width:100%;
+	
+	}
+	.weddingImgBox_2{
+		top:250px;
+		left:0;
+		width:100%;
+	}
+	.weddingImgBox_3{
+		top:500px;
+		left:0;
+		width:100%;
+	}
+	.wdImgBox_1{    /*각 box 에 들어가는 이미지 1*/
+			float:left;
+			width:40%;
+			height:50%;
+		}
+		.wdImgBox_2{	/*각 box 에 들어가는 이미지 2*/
+		 	float:left;
+			width:60%;
+			height:100%;
+		} 
+		.wdImgBox_3{	/*각 box 에 들어가는 이미지 3*/
+			position: relative;
+			top:50%;
+			width:40%;
+			height:50%;
+		}
+		.wdImgBox_3 img{
+			position: relative;
+			top:-200%;
+		}
+}
+@media(min-width:768px){      /* 768px 이상 1200px 이하  적용*/
+	.wedding{
+		height:500px;
+	}
+}
+@media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
+	.wedding{
+		height:800px;
+	}
+}
