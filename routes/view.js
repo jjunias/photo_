@@ -1,4 +1,4 @@
-module.exports = function(app,View,multer)
+module.exports = function(app,View)
 {
 	app.get('/viewLoad', function(req,res){
         View.find(function(err, views){
@@ -20,9 +20,6 @@ module.exports = function(app,View,multer)
             }
             res.json({result: 1});
         });
-    });
-    app.post('/viewUpload',multer({dest:'/images/upload/'}).single('123'),function(req,res){
-        
     });
 
 }

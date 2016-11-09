@@ -34,7 +34,6 @@ var port = process.env.PORT || 7000;
 
 // [CONFIGURE ROUTER]
 var user_Router = require('./routes/user')(app,User);
-var view_Router = require('./routes/view')(app,View,multer);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)
