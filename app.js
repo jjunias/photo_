@@ -5,7 +5,7 @@ var express     = require('express');
 var app         = express();
 var bodyParser  = require('body-parser');
 var mongoose    = require('mongoose');
-var multiparty = require('multiparty');
+var multiparty = require('connect-multiparty');
 var fs = require('fs');
 var cloudinary =require('cloudinary');
 var path = require('path'); //main 페이지 설정 index.html
@@ -19,7 +19,7 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 app.use(express.static(path.join(__dirname, 'public'))); //index페이지 설정
-
+app.use(multiparty()); //multiparty 사용
 mongoose.connect('mongodb://orstudio:123321@ds139937.mlab.com:39937/orstudio');   //mongolab 연동
 //cloudinary 
 cloudinary.config({ 
@@ -43,7 +43,7 @@ var port = process.env.PORT || 7000;
 // [CONFIGURE ROUTER]
 var user_Router = require('./routes/user')(app,User);
 var view_Router = require('./routes/view')(app,View);
-var upload_Router = require('./routes/upload.js')(app,fs,cloudinary);
+var upload_Router = require('./routes/upload.js')(app,View,cloudinary);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)

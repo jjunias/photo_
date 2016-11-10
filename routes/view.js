@@ -6,7 +6,7 @@ module.exports = function(app,View)
               res.json(views);
         })
     });
-	app.post('/viewWrite', function(req, res){
+/*	app.post('/viewWrite', function(req, res){
         var view = new View();
         view.name = req.body.name;
         view.age = req.body.age;
@@ -21,5 +21,6 @@ module.exports = function(app,View)
             res.json({result: 1});
         });
     });
+*/
 
 }

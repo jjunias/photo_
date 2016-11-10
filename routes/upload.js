@@ -1,9 +1,21 @@
-module.exports = function(app,fs,cloudinary){
+module.exports = function(app,View,cloudinary)
+{
 	app.post('/upload', function(req, res){
-		/*cloudinary.uploader.upload("1.jpg",function(result) { console.log(result) });*/
+		cloudinary.uploader.upload(req.files.img.path,function(result) {
+    	console.log(result)},{public_id:req.files.img.name,width:500,height:300})	
 
-		cloudinary.uploader.upload("1.jpg",function(result) {
-    console.log(result)
-    }, {public_id: 'sample_remote',width:500,height:300})
-	});
+    	var view = new View();
+    	view.name = req.body.name;
+    	view.age = req.body.age;
+    	view.img = "http://res.cloudinary.com/hmwuqfqmp/image/upload/"+req.files.img.name+".jpg";
+  	    view.content = req.body.content;
+        view.save(function(err){
+            if(err){
+                console.error(err);
+                res.json({result: 0});
+                return;
+            }
+            res.json({result: 1});
+        });
+    });
 }

@@ -14,6 +14,10 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/photo.html',
 		controller:'photo'
 	})
+	.when('/review_Upload',{
+		templateUrl :'pages/review_Upload.html',
+		controller:'review_Upload'
+	})
 	.when('/main',{
 		templateUrl :'pages/main.html',
 		controller:'main_img'	

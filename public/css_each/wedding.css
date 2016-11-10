@@ -66,11 +66,11 @@
 }
 @media(min-width:768px){      /* 768px 이상 1200px 이하  적용*/
 	.wedding{
-		height:500px;
+		height:400px;
 	}
 }
 @media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
 	.wedding{
-		height:600px;
+		height:501px;
 	}
 }

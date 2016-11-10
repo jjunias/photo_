@@ -1,12 +1,8 @@
- <link rel="stylesheet" href="css_each/main/main_img.css"/> <!--main img 영역 css-->
+<link rel="stylesheet" href="css_each/main/main_img.css"/> <!--main img 영역 css-->
 <link rel="stylesheet" href="css_each/main/wedding.css"/><!-- wedding 영역 css -->
 <link rel="stylesheet" href="css_each/main/review.css"/><!--review 영역 css -->
 <link rel="stylesheet" href="css_each/main/photo.css"/><!-- photo 영역 css -->
 
-<script src='controller/main_img.js'></script>
-<script src='controller/wedding.js'></script>
-<script src='controller/review.js'></script>
-<script src='controller/photo.js'></script>
 <div name="main_img" id="main" ng-controller ="main_img">   <!--main img 시작-->
 	<slick infinite=true slides-to-show=1 slides-to-scroll=1 autoplay=true>
 			<div class="mainImg_Box" ng-repeat="img in img">

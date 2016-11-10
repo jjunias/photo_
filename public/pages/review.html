@@ -1,3 +1,8 @@
+<style>
+	.default{
+		margin-top:100px;
+	}
+</style>
 <div class="default"></div>
 <div class="review" ng-controller="review" data-ng-init="load()">
 	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index"> 
@@ -8,7 +13,8 @@
 			<strong><center><p>PROFILE</p></strong><p>{{tmp.name}}</p><p>{{tmp.age}}</p><p>{{tmp.content}}</p></center>
 		</div>
 	</div>
-	<button class="btn btn-default review_WriteBtn" data-toggle="modal" data-target="#viewWrite">글쓰기</button>
+	<!-- s<button class="btn btn-default review_WriteBtn" data-toggle="modal" data-target="#viewWrite">글쓰기</button> -->
+	<button class="btn btn-default" ng-click="go('/review_Upload')">글쓰기</button>
 	<div id="viewWrite" class="modal"> <!--글쓰기 버튼 클릭시 modal 창 으로 보여주기 -->
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -33,7 +39,6 @@
 						</div>
 					</form>			
 				</div>
-			</div>
-		</div>
+			</div>		</div>
 	</div> <!--글쓰기 버튼 클릭시 modal 창 으로 보여주기 끝 -->
 </div>

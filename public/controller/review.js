@@ -1,9 +1,8 @@
-myApp.controller("review",function($scope,$http){  //review 컨트롤러 기능
+myApp.controller("review",function($scope,$http,$location){  //review 컨트롤러 기능
   	$scope.viewDate ={}; //post 사용 시 값보냄
   	$scope.view={}; //get 모든값 받아옴
   	$scope.main_view = {}; //get 마지막 6개만 추출
   	$scope.viewWriteForm = function($event){
-  		alert("h");
   	  	$event.preventDefault();
   	  	$http({
   	  		url:"/viewWrite",
@@ -28,4 +27,7 @@ myApp.controller("review",function($scope,$http){  //review 컨트롤러 기능
   		  	}
   		});
   	};
+    $scope.go = function(path){          //글쓰기 버튼 클릭시 page 이동 
+      $location.path(path);
+    };
 });
