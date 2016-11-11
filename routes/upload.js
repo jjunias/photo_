@@ -2,7 +2,7 @@ module.exports = function(app,View,cloudinary)
 {
 	app.post('/upload', function(req, res){
 		cloudinary.uploader.upload(req.files.img.path,function(result) {
-    	console.log(result)},{public_id:req.files.img.name,width:500,height:300})	
+    	console.log(result)},{public_id:req.files.img.name,width:400,height:600})	
 
     	var view = new View();
     	view.name = req.body.name;
