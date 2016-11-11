@@ -7,7 +7,7 @@ myApp.controller("review",function($scope,$http,$location){  //review 컨트롤�
   			method:"get"
   		}).success(function(data){
   			  $scope.view = data;
-  			var _main = (data.length-6);
+  			var _main = (data.length-8);
   			for(i=data.length-1;i>_main;i--){
   				if(i<0){
   					break;
