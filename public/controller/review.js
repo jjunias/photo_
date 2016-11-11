@@ -1,17 +1,6 @@
 myApp.controller("review",function($scope,$http,$location){  //review 컨트롤러 기능
-  	$scope.viewDate ={}; //post 사용 시 값보냄
   	$scope.view={}; //get 모든값 받아옴
   	$scope.main_view = {}; //get 마지막 6개만 추출
-  	$scope.viewWriteForm = function($event){
-  	  	$event.preventDefault();
-  	  	$http({
-  	  		url:"/viewWrite",
-  	  		method:"post",
-  	  		data:$scope.viewDate
-  	  	}).success(function(){
-  	  		alert("성공");
-  	  	});
-  	};
   	$scope.load = function($event){
   		$http({
   			url:"/viewLoad",

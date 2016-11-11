@@ -1,11 +1,12 @@
 myApp.controller("review_Upload",function($scope,$http,$location){  //review 컨트롤러 기능
 	$scope.viewDate ={}; //post 사용 시 값보냄
-	$scope.viewWriteForm = function($event){
-		$http({
+	$scope.viewWriteForm = function($event){ 
+    $http({
   	  		url:"/viewWrite",
   	  		method:"post",
   	  		data:$scope.viewDate
   	  	}).success(function(){
+          alert(data);
   	  	});
   	};
 	angular.element(function(){              // input file css 기능 script

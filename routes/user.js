@@ -18,7 +18,7 @@ module.exports = function(app,User)
                 res.json({result: 0});
                 return;
             }
-            location.href='/';
+            location.href='/index.html';
         });
     });
 }

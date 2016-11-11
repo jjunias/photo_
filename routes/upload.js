@@ -15,7 +15,8 @@ module.exports = function(app,View,cloudinary)
                 res.json({result: 0});
                 return;
             }
-            res.json({result: 1});
+             res.redirect('/#/review');
+
         });
     });
 }
