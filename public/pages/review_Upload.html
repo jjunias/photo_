@@ -4,34 +4,36 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-
-</style>
-
 </head>
 <body>
 <div class="review_Upload" ng-controller="review_Upload">
 	<center><h3>REVIEW 글 등록 </h3></center>
-	<div class="modal-body">
-		<form action="/upload" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data">
-			<div class="form-group">
+		<form action="/upload" name="uploadForm" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data" novalidate>
+			<div class="form-group has-feedback">
 				<label for="name" class="sr-only">이름</label>
-				<input type="text"	ng-model="viewDate.name"  id="name" name="name" placeholder="이름 입력:" class="form-control"/><br/>
+				<input type="text" ng-model="viewDate.name" id="name" name="name" placeholder="이름 입력:" class="form-control" ng-required="true"
+					pattern="[a-zA-Z가-힣\s]{1,15}$"/>
+				<p class="help-block" ng-show="uploadForm.name.$invalid">이름을 입력하세요(영문 대소문자, 한글 15자 이내)</p><br/>
 				<label for="age" class="sr-only">나이</label>
-				<input type="text" ng-model="viewDate.age"  id="age" name="age" placeholder="나이 입력:" class="form-control"/><br/>				
+				<input type="text" ng-model="viewDate.age" id="age" name="age" placeholder="나이 입력:" class="form-control" ng-required="true"
+					pattern="^[1-9][0-9]{0,2}$"/>
+				<p class="help-block" ng-show="uploadForm.name.$valid&&uploadForm.age.$invalid">나이를 입력하세요(숫자만 입력하세요 1~999)</p><br/>	
 				<div class="filebox">
 					<label for="ex_filename">업로드</label>
-					<input class="upload-name" name="test" ng-model="viewDate.test" value="파일선택" disabled="disabled"> 
-					<input type="file" id="ex_filename" name="img" class="upload-hidden" ng-model="viewDate.img">
+					<input class="upload-name" type="text" id="upload_" ng-model="viewDate.img" ng-required="false" placeholder="파일을 선택해주세요" disabled="disabled"/> 
+					<input type="file" id="ex_filename" accept=".gif,.jpg,.png" name="img" class="upload-hidden"/>
 				</div>				
 				<label for="content" class="sr-only">내용</label><br/>
-				<textarea ng-model="viewDate.content"  name="content" id="content" cols="50" rows="20" class="form-control" style="resize:none;">	
+				<textarea ng-model="viewDate.content" name="content" id="content" cols="50" rows="20" class="form-control" 
+				placeholder="간단한 인사말 을 적어주세요 20자 이내 ." style="resize:none;" ng-required="true">	
 				</textarea>
-				<input class="btn btn-success" type="submit" value="확인">
-				<button class="btn btn-danger">취소</button>
+				<button class="btn btn-success" type="submit">확인</button>
+				<button type="button" class="btn btn-danger">취소</button>
 			</div>
 		</form>			
 	</div>
 </div>
 </body>
+<script>
+</script>
 </html>
