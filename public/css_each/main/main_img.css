@@ -1,4 +1,4 @@
-#main  button{       /*버튼 안보이게*/
+.main  button{       /*버튼 안보이게*/
 	display: none !important;
 }
 .mainImg_Box img{
