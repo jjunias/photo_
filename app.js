@@ -42,8 +42,7 @@ var port = process.env.PORT || 7000;
 
 // [CONFIGURE ROUTER]
 var user_Router = require('./routes/user')(app,User);
-var view_Router = require('./routes/view')(app,View);
-var upload_Router = require('./routes/upload.js')(app,View,cloudinary);
+var view_Router = require('./routes/view.js')(app,View,cloudinary);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)

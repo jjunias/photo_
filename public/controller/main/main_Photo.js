@@ -1,4 +1,4 @@
-myApp.controller("photo",function($scope){
+myApp.controller("main_Photo",function($scope){
 	$scope.photo = ["images/photo/photo_01.jpg",
 					"images/photo/photo_02.jpg",
 					"images/photo/photo_03.jpg",

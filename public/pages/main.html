@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="css_each/main/main_img.css"/> <!--main img 영역 css-->
-<link rel="stylesheet" href="css_each/main/wedding.css"/><!-- wedding 영역 css -->
-<link rel="stylesheet" href="css_each/main/review.css"/><!--review 영역 css -->
-<link rel="stylesheet" href="css_each/main/photo.css"/><!-- photo 영역 css -->
+<link rel="stylesheet" href="css_each/main/main_Img.css"/> <!--main img 영역 css-->
+<link rel="stylesheet" href="css_each/main/main_Wedding.css"/><!-- wedding 영역 css -->
+<link rel="stylesheet" href="css_each/main/main_Review.css"/><!--review 영역 css -->
+<link rel="stylesheet" href="css_each/main/main_Photo.css"/><!-- photo 영역 css -->
 
 <div name="main_img" id="main" ng-controller ="main_img">   <!--main img 시작-->
 	<slick infinite=true slides-to-show=1 slides-to-scroll=1 autoplay=true>
@@ -10,41 +10,41 @@
 			</div>
 	</slick>
 </div> <!--main img 끝-->
-<div class="wedding" ng-controller="wedding"> <!--wedding 시작-->
+<div class="wedding" ng-controller="main_Wedding"> <!--wedding 시작-->
 	<div class="weddingTxt">
 		<p id="wedding">WEDDING</p>
 	</div>
 	<div class="wrap_Wedding"> <!--positon fixed 를하기위해 relative 로 감싸는 공간 -->
 		<div class="weddingImgBox_1">
-			<div class="wdImgBox_1"><img src="images/wedding_01.jpg" ng-mouseover="mouseover('images/wedding_01.jpg','1')" 
-																	 ng-mouseout="mouseout('images/wedding_08.jpg','1')"/>
+			<div class="wdImgBox_1"><img src="images/wedding/wedding_01.jpg" ng-mouseover="mouseover('images/wedding/wedding_01.jpg','1')" 
+																	 ng-mouseout="mouseout('images/wedding/wedding_08.jpg','1')"/>
 			</div>
-			<div class="wdImgBox_2" id="wdImgBox_1"><img src="images/wedding_08.jpg"/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_02.jpg" ng-mouseover="mouseover('images/wedding_02.jpg','1')"
-																	 ng-mouseout="mouseout('images/wedding_08.jpg','1')"/>
+			<div class="wdImgBox_2" id="wdImgBox_1"><img src="images/wedding/wedding_08.jpg"/></div>
+			<div class="wdImgBox_3"><img src="images/wedding/wedding_02.jpg" ng-mouseover="mouseover('images/wedding/wedding_02.jpg','1')"
+																	 ng-mouseout="mouseout('images/wedding/wedding_08.jpg','1')"/>
 			</div>
 		</div>
 		<div class="weddingImgBox_2">
-			<div class="wdImgBox_1"><img src="images/wedding_03.jpg" ng-mouseover="mouseover('images/wedding_03.jpg','2')"
-																	 ng-mouseout="mouseout('images/wedding_09.jpg','2')"/>
+			<div class="wdImgBox_1"><img src="images/wedding/wedding_03.jpg" ng-mouseover="mouseover('images/wedding/wedding_03.jpg','2')"
+																	 ng-mouseout="mouseout('images/wedding/wedding_09.jpg','2')"/>
 			</div>
-			<div class="wdImgBox_2" id="wdImgBox_2"><img src="images/wedding_09.jpg"/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_04.jpg" ng-mouseover="mouseover('images/wedding_04.jpg','2')"
-																	 ng-mouseout="mouseout('images/wedding_09.jpg','2')"/>
+			<div class="wdImgBox_2" id="wdImgBox_2"><img src="images/wedding/wedding_09.jpg"/></div>
+			<div class="wdImgBox_3"><img src="images/wedding/wedding_04.jpg" ng-mouseover="mouseover('images/wedding/wedding_04.jpg','2')"
+																	 ng-mouseout="mouseout('images/wedding/wedding_09.jpg','2')"/>
 			</div>
 		</div>
 		<div class="weddingImgBox_3">
-			<div class="wdImgBox_1"><img src="images/wedding_05.jpg" ng-mouseover="mouseover('images/wedding_05.jpg','3')"
-																	 ng-mouseout="mouseout('images/wedding_07.jpg','3')"/>
+			<div class="wdImgBox_1"><img src="images/wedding/wedding_05.jpg" ng-mouseover="mouseover('images/wedding/wedding_05.jpg','3')"
+																	 ng-mouseout="mouseout('images/wedding/wedding_07.jpg','3')"/>
 			</div>
-			<div class="wdImgBox_2" id="wdImgBox_3"><img src="images/wedding_07.jpg"/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_06.jpg" ng-mouseover="mouseover('images/wedding_06.jpg','3')"
-																	 ng-mouseout="mouseout('images/wedding_07.jpg','3')"/>
+			<div class="wdImgBox_2" id="wdImgBox_3"><img src="images/wedding/wedding_07.jpg"/></div>
+			<div class="wdImgBox_3"><img src="images/wedding/wedding_06.jpg" ng-mouseover="mouseover('images/wedding/wedding_06.jpg','3')"
+																	 ng-mouseout="mouseout('images/wedding/wedding_07.jpg','3')"/>
 			</div>
 		</div>
 	</div>
 </div><!--wedding 끝-->
-<div class="review" ng-controller="review" data-ng-init="load()"> <!--review 시작-->
+<div class="review" ng-controller="main_Review" data-ng-init="load()"> <!--review 시작-->
 	<div class="reviewTxt">
 		<p id="view">REVIEW</p>
 	</div>
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 </div>  <!--review 끝-->
-<div class="photo" ng-controller="photo"> <!--photo 시작-->
+<div class="photo" ng-controller="main_Photo"> <!--photo 시작-->
 	<div class="photoTxt">
 		<p id="photo">PHOTO</p>
 	</div>
@@ -78,5 +78,4 @@
 		</div>
 	</div>
 </div><!--photo 시작-->
-<!-- <div class="footer">
-</div> -->
+	

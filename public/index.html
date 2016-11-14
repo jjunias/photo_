@@ -15,11 +15,12 @@
   	<link rel="stylesheet" href="css/animate.css"/>
 
   	<script src="controller/route.js"></script> <!--script controller 적용-->
-  	<script src='controller/main_img.js'></script>
+  	<script src='controller/main/main_img.js'></script>
+		<script src='controller/main/main_Wedding.js'></script>
+		<script src='controller/main/main_Review.js'></script>
+		<script src='controller/main/main_Photo.js'></script>
 	<script src='controller/wedding.js'></script>
-	<script src='controller/review.js'></script>
 	<script src='controller/review_Upload.js'></script>
-	<script src='controller/photo.js'></script>
 	<script src='controller/catalog.js'></script>
  	
  	<!--외부 css 적용-->
@@ -82,6 +83,8 @@
 		</div>
 	</div>
 	<div ng-view></div>
+	<div class="footer">
+	</div>
 </div>
 </body>
 </html>

@@ -1,31 +1,46 @@
-<div class="default"></div>
+<link rel="stylesheet" href="css_each/wedding/wedding.css"/>
+
+<div class="sub_menu">
+	<div ng-click="view('WEDDING')">WEDDING</div>
+	<div ng-click="view('SKY')">SKY_PARK</div>
+	<div ng-click="view('OLYMPIC')">OLYMPIC_PARK</div>
+	
+</div>
+
 <div class="wedding" ng-controller="wedding">
-	<div class="wrap_Wedding"> <!--positon fixed 를하기위해 relative 로 감싸는 공간 -->
-		<div class="weddingImgBox_1">
-			<div class="wdImgBox_1"><img src="images/wedding_01.jpg" ng-mouseover="mouseover('images/wedding_01.jpg','1')" 
-																	 ng-mouseout="mouseout('','1')"/>
+<p>WEDDING</p>
+<input type="text" ng-model="view_Img" class="sr-only"/>
+	<div ng-switch="" on="view_Img">
+		<div class="wedding_" ng-switch-default>
+			<div class="main_Img">
+				<img src="/images/wedding/wedding_main.jpg"/>
 			</div>
-			<div class="wdImgBox_2" id="wdImgBox_1"><img src=""/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_02.jpg" ng-mouseover="mouseover('images/wedding_02.jpg','1')"
-																	 ng-mouseout="mouseout('','1')"/>
-			</div>
-		</div>
-		<div class="weddingImgBox_2">
-			<div class="wdImgBox_1"><img src="images/wedding_03.jpg" ng-mouseover="mouseover('images/wedding_03.jpg','2')"
-																	 ng-mouseout="mouseout('','2')"/>
-			</div>
-			<div class="wdImgBox_2" id="wdImgBox_2"><img src=""/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_04.jpg" ng-mouseover="mouseover('images/wedding_04.jpg','2')"
-																	 ng-mouseout="mouseout('','2')"/>
+			<div class="sub_Img" ng-repeat="img in wedding_Img">
+				<img ng-src="{{img}}"/>
 			</div>
 		</div>
-		<div class="weddingImgBox_3">
-			<div class="wdImgBox_1"><img src="images/wedding_05.jpg" ng-mouseover="mouseover('images/wedding_05.jpg','3')"
-																	 ng-mouseout="mouseout('images/wedding_07.jpg','3')"/>
+		<div class="wedding_" ng-switch-when="WEDDING">
+			<div class="main_Img">
+				<img src="/images/wedding/wedding_main.jpg"/>
 			</div>
-			<div class="wdImgBox_2" id="wdImgBox_3"><img src="images/wedding_07.jpg"/></div>
-			<div class="wdImgBox_3"><img src="images/wedding_06.jpg" ng-mouseover="mouseover('images/wedding_06.jpg','3')"
-																	 ng-mouseout="mouseout('images/wedding_07.jpg','3')"/>
+			<div class="sub_Img" ng-repeat="img in wedding_Img">
+				<img ng-src="{{img}}"/>
+			</div>
+		</div>
+		<div class="wedding_" ng-switch-when="SKY">
+			<div class="main_Img">
+				<img src="/images/wedding/skypark_01.jpg"/>
+			</div>
+			<div class="sub_Img" ng-repeat="img in sky_Img">
+				<img ng-src="{{img}}"/>
+			</div>
+		</div>
+		<div class="wedding_" ng-switch-when="OLYMPIC">
+			<div class="main_Img">
+				<img src="/images/wedding/olympicpark_01.jpg"/>
+			</div>
+			<div class="sub_Img" ng-repeat="img in olympic_Img">
+				<img ng-src="{{img}}"/>
 			</div>
 		</div>
 	</div>

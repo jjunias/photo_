@@ -26,7 +26,7 @@ myApp.controller("review_Upload",function($scope,$http,$location){  //review 컨
     }
     else{
       $http({
-    	  		url:"/viewWrite",
+    	  		url:"/viewUpload",
     	  		method:"post",
     	  		data:$scope.viewDate
     	  	}).success(function(){

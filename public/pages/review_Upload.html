@@ -8,7 +8,7 @@
 <body>
 <div class="review_Upload" ng-controller="review_Upload">
 	<center><h3>REVIEW 글 등록 </h3></center>
-		<form action="/upload" name="uploadForm" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data" novalidate>
+		<form action="/viewUpload" name="uploadForm" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data" novalidate>
 			<div class="form-group has-feedback">
 				<label for="name" class="sr-only">이름</label>
 				<input type="text" ng-model="viewDate.name" id="name" name="name" placeholder="이름 입력:" class="form-control" ng-required="true"
