@@ -27,7 +27,6 @@ img{
 .wedding{          /* wedding 영역*/
 	float:left;
 	width: 100%;
-	cursor:pointer;
 }
 .review{            /*review 영역*/
 	float:left;
