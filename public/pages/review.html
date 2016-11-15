@@ -1,16 +1,12 @@
+<link rel="stylesheet" href="/css_each/review/review.css"/>
 <style>
-	.default{
-		margin-top:80px;
-	}
 </style>
 <div class="review" ng-controller="review" data-ng-init="load()">
-	<button class="btn btn-default" ng-click="go('/review_Upload')">글쓰기</button>
+	<button class="btn btn-default review_Btn" ng-click="go('/review_Upload')">글쓰기</button>
+
 	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index"> 
 		<div class="review_Img">
 			<img src="{{tmp.img}}"/>
-		</div>
-		<div class="review_Txt">
-			<strong><center><p>PROFILE</p></strong><p>{{tmp.name}}</p><p>{{tmp.age}}</p><p>{{tmp.content}}</p></center>
 		</div>
 	</div>	
 </div>

@@ -1,0 +1,51 @@
+	.review{
+		float: left;
+		margin-left:13%;
+		width:74%;
+		margin-top:130px;
+	}
+	.review_Btn{
+		position:absolute;
+		top:100px;
+		right:16%;
+	}
+	.review_ImgBox{
+		float: left;
+		margin:50px 2%;
+		width:400px;
+		height:600px;
+
+	}
+	.review_Img{
+		float:left;
+		width: 100%;
+		height: 100%;
+	}
+@media(max-width:1200px){      /* 1200px 이하  적용*/
+	.review{
+		margin-left:2%;
+		width:100%;
+	}
+	.review_ImgBox{
+		margin:20px 1%;
+		width:300px;
+		height:450px;
+	}
+}
+@media(max-width:768px){          /* 768 이하 적용*/
+	.review_Btn{
+		top:65px;
+		right:2%;
+	}
+	.review{
+		margin-left:0;
+		margin-top:110px;
+	}
+	.review_ImgBox{
+		margin:15px 1%;
+		margin-left:2%;
+		width:96%;
+	}
+}
+@media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
+}
