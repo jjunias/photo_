@@ -36,6 +36,9 @@
 	width:31%;
 }
 .wedding > p{
+	position: absolute;
+	top:120px;
+	left:45%;
 	text-align: center;
 	font-size:25px;
 }
@@ -74,8 +77,10 @@
 	.sub_menu{
 		padding-left:10%;
 	}
-	.sub_menu div{
-		font-size:13px;
+	.wedding >p{
+		font-size:15px;
+		top:100px;
+		left:40%;
 	}
 }
 @media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
