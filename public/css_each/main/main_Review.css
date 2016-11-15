@@ -11,11 +11,13 @@
 .review_ImgBox{
 	float: left;
 	width: 25%;
+	margin-bottom:5px;
 	height:600px;
 }
 	.review_Img{
 		float:left;
-		width:100%;
+		margin:1% 1%;
+		width:98%;
 		height:100%;
 	}
 .review_WriteBtn{               /*review 글쓰기 버튼 css*/

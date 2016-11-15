@@ -67,15 +67,20 @@
 	}
 	.weddingImgBox_1{
 		width:100%;
+		padding:0 1%;
+		padding-top:1%;
 	
 	}
 	.weddingImgBox_2{
 		top:250px;
+		padding:0 1%;
+		padding-top:1%;
 		left:0;
 		width:100%;
 	}
 	.weddingImgBox_3{
 		top:500px;
+		padding:1% 1%;
 		left:0;
 		width:100%;
 	}

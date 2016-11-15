@@ -36,7 +36,7 @@
 @media(max-width:768px){          /* 768 이하 적용*/
 	.review{
 		margin-left:0;
-		margin-top:110px;
+		margin-top:90px;
 	}
 	.review_ImgBox{
 		margin:25px 0;
@@ -45,11 +45,11 @@
 	}
 	.review >p{
 		font-size:15px;
-		top:100px;
+		top:70px;
 		left:40%;
 	}
 	.review_Btn{
-		top:65px;
+		top:60px;
 		right:3%;
 	}
 }
