@@ -4,9 +4,26 @@
 <div class="review" ng-controller="review" data-ng-init="load()">
 	<button class="btn btn-default review_Btn" ng-click="go('/review_Upload')">글쓰기</button>
 	<p><strong>REVIEW</strong></p>
-	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index"> 
-		<div class="review_Img">
+	<span>※ 사진을 click 하면 간단한 소개가 나옵니다.</span>
+	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index">
+		<div class="review_Img" ng-click="modal(tmp._id)">
 			<img src="{{tmp.img}}"/>
 		</div>
-	</div>	
+	</div>
+	<div class="view_Img">
+		<button class="btn btn-default modal_Exit" ng-click="exit()">x</button>
+		<div class="modal_Img">
+			<img ng-src=""/>
+		</div>
+		<div class="modal_Txt">
+		<button class="pre btn btn-default" ng-click="pre()">이전</button>
+		<button class="next btn btn-default" ng-click="next()">다음</button>
+			<center>		
+				<p><strong>PROFILE</strong></p>
+				<p class="modalName"></p>
+				<p class="modalAge"></p>
+				<p class="modalContent"></p>
+			</center>
+		</div>
+	</div>
 </div>

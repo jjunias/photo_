@@ -1,4 +1,4 @@
-module.exports = function(app,View,cloudinary)
+    module.exports = function(app,View,cloudinary)
 {
 	app.get('/viewLoad', function(req,res){
         View.find(function(err, views){

@@ -1,7 +1,8 @@
 myApp.controller("dim",function($scope){
 	 $scope.dim = function(){
-	 	$(".dim").css('display','none');
+	 	$(".dim").hide();
 	 	$(".response_Menu").css('left','-70%');
+	 	$(".view_Img").hide();
 	}
 });
 
