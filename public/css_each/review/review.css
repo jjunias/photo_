@@ -40,11 +40,11 @@
 .modal_Img{
 	float:left;
 	width: 100%;
-	height:80%;
+	height:75%;
 }
 .modal_Txt{
 	float:center;
-	height:20%;
+	height:25%;
 }
 img{
 	width: 100% !important;
@@ -106,17 +106,17 @@ img{
 	}
 	.view_Img{
 	position:fixed;
-	top:1%;
-	left:1%;
-	width:98%;
-	height:720px;
+	top:3%;
+	left:5%;
+	width:90%;
+	height:680px;
 	background-color:white;
 	display: none;
 	}
 	.pre{
-	position:relative;
-	top:620px;
-	left:10%;
+		position:relative;
+		top:620px;
+		left:10%;
 	}
 	.next{
 		position:absolute;
