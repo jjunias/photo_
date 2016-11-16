@@ -46,4 +46,7 @@ myApp.controller("review",function($scope,$http,$location){
     $(".view_Img").hide();
     $(".dim").hide();
   };
+  $scope.go = function(path){          //글쓰기 버튼 클릭시 page 이동 
+    $location.path(path);
+  };
 });

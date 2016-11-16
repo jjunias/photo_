@@ -16,7 +16,4 @@ myApp.controller("main_Review",function($scope,$http,$location){  //review 컨�
   		  	}
   		});
   	};
-    $scope.go = function(path){          //글쓰기 버튼 클릭시 page 이동 
-      $location.path(path);
-    };
 });

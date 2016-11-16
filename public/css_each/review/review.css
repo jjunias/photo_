@@ -106,10 +106,10 @@ img{
 	}
 	.view_Img{
 	position:fixed;
-	top:2%;
+	top:4%;
 	left:5%;
 	width:90%;
-	height:670px;
+	height:90%;
 	background-color:white;
 	display: none;
 	}
@@ -120,13 +120,13 @@ img{
 		height:25%;
 	}
 	.pre{
-		position:relative;
-		top:550px;
+		position:absolute;
+		top:82%;
 		left:10%;
 	}
 	.next{
 		position:absolute;
-		top:550px;
+		top:82%;
 		right:10%;
 	}	
 }
