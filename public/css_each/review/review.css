@@ -111,25 +111,14 @@ img{
 	left:5%;
 	width:90%;
 	height:90%;
-	background-color:black;
 	display: none;
 	}
 	.modal_Img{
-		height:75%;
+		height:80%;
 	}
 	.modal_Txt{
-		height:25%;
+		height:20%;
 	}
-	.pre{
-		position:absolute;
-		top:82%;
-		left:10%;
-	}
-	.next{
-		position:absolute;
-		top:82%;
-		right:10%;
-	}	
 }
 @media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
 }
