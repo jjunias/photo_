@@ -1,53 +1,68 @@
 <link rel="stylesheet" href="css_each/photo/photo.css"/>
 <style>
-.photo{
-	float:left;
-	margin-top:150px; 
-	margin-left:15%;
-	width: 70%;
+@media(max-width:1200px){      /* 1200px 이하  적용*/
+	.photo{
+		margin-left:2%;
+		width:100%;
+	}
 }
-.photo_Btn{
-	position:absolute;
-	top:130px;
-	right:19%;
+@media(max-width:768px){          /* 768 이하 적용*/
+	.photo{
+		margin-left:0;
+		margin-top:110px;
+	}
+	.photo span{
+		position: absolute;
+		top:110px;
+		right:5%;
+		color:grey;
+	}	
+	.photo_Box{
+		margin:25px 0;
+		margin-left:5%;
+		height:300px;
+		width:90%;
+	}
+	.photo >p{
+		font-size:15px;
+		top:70px;
+		left:40%;
+	}
+	.photo_Btn{
+		top:60px;
+		right:3%;
+	}
+	.photo_Txt{
+		position: relative;
+		top:-35%;
+		left:-40%;
+	}
+	.loc{
+	font-size: 14px;
+	}
+	.date{
+		display: none;
+	}
 }
-.photo > p{
-	position:absolute;
-	top:120px;
-	left:45%;
-	text-align: center;
-	font-size:25px;
+@media(min-width:1200px){   /*  1200px 이상 시 img heigt 고정 */
 }
-.photo >span{
-	position: absolute;
-	top:170px;
-	right:19%;
-	color:grey;
-}
-.photo_Img{
-	float:left;
-	margin:50px 3%;
-	width:44%;
-	height:500px;
-}
-.loc{
-	text-align: center;
-	font-size: 20px;
-}
-.date{
-	float:right;
-	margin-top:-25px;
-}
+
 </style>
 <body>
 <div class="photo" ng-controller="photo" data-ng-init="load()">
 	<button class="btn btn-default photo_Btn" ng-click="go('/photo_Upload')">글쓰기</button>
 	<span>※ 사진을 click 하면 더 많은 사진을 볼수 있습니다.</span>
 	<p><strong>PHOTO</strong></p>
-	<div class="photo_Img" ng-repeat="img in view">	
-		<img ng-src="{{img.img}}" ng-click='imgClick(img.location,img.date)'/>
-		<span class="loc"><center><strong>{{img.location}}</strong></center></span>
-		<span class="date">{{img.date}}</span>
+	
+	<div class="photo_Box" ng-repeat="img in view">
+		<div class="photo_Img">	
+			<img ng-src="{{img.img}}" ng-click='imgClick(img.location,img.date)'/>
+		<div class="photo_Txt">
+			<span class="loc"><center><strong>{{img.location}}</strong></center></span>
+			<span class="date">{{img.date}}</span>	
+		</div>
+		</div>
+		
 	</div>
 </div>
 </body>

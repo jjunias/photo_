@@ -1,0 +1,44 @@
+.photo{
+	float:left;
+	margin-top:150px; 
+	margin-left:15%;
+	width: 70%;
+}
+.photo_Btn{
+	position:absolute;
+	top:130px;
+	right:19%;
+}
+.photo > p{
+	position:absolute;
+	top:120px;
+	left:45%;
+	text-align: center;
+	font-size:25px;
+}
+.photo >span{
+	position: absolute;
+	top:170px;
+	right:19%;
+	color:grey;
+}
+.photo_Box{
+	float:left;
+	margin:50px 2%;
+	width: 44%;
+	height:400px;
+}
+.photo_Img{
+	float:left;
+	width:100%;
+	height:100%;
+}
+.photo_Txt{
+}
+.loc{
+	font-size: 20px;
+}
+.date{
+	float:right;
+	margin-top:-25px;
+}

@@ -30,5 +30,5 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/main.html',
 		controller:'main_img'	
 	})
-	/*.otherwise({redirectTo:'/main'});*/
+	.otherwise({redirectTo:'/main'});
 });
