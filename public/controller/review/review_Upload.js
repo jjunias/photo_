@@ -30,7 +30,6 @@ myApp.controller("review_Upload",function($scope,$http,$location){  //review 컨
     	  		method:"post",
     	  		data:$scope.viewDate
     	  	}).success(function(){
-            alert(data);
     	  	});
     	}
     };

@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="css_each/photo/photo.css"/>
+<body>
+<div class="photo" ng-controller="photo_Img" data-ng-init="load()">
+	<button class="btn btn-default photo_Btn" ng-click="go('/photo_Upload')">글쓰기</button>
+	<p><strong>{{clickPhoto}}</strong></p>
+	<div ng-repeat="img in view">
+		<img ng-src="{{img.img}}"/>	
+	</div>
+	</form>
+</div>
+</body>

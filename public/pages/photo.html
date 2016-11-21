@@ -1,15 +1,53 @@
- <link rel="stylesheet" href="css_each/photo/photo.css"/><!--review upload css-->
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css_each/photo/photo.css"/>
+<style>
+.photo{
+	float:left;
+	margin-top:150px; 
+	margin-left:15%;
+	width: 70%;
+}
+.photo_Btn{
+	position:absolute;
+	top:130px;
+	right:19%;
+}
+.photo > p{
+	position:absolute;
+	top:120px;
+	left:45%;
+	text-align: center;
+	font-size:25px;
+}
+.photo >span{
+	position: absolute;
+	top:170px;
+	right:19%;
+	color:grey;
+}
+.photo_Img{
+	float:left;
+	margin:50px 3%;
+	width:44%;
+	height:500px;
+}
+.loc{
+	text-align: center;
+	font-size: 20px;
+}
+.date{
+	float:right;
+	margin-top:-25px;
+}
 </style>
-</head>
 <body>
-<div class="photo">
-	<button class="btn btn-default photo_Btn" ng-click="go('/review_Upload')">글쓰기</button>
+<div class="photo" ng-controller="photo" data-ng-init="load()">
+	<button class="btn btn-default photo_Btn" ng-click="go('/photo_Upload')">글쓰기</button>
+	<span>※ 사진을 click 하면 더 많은 사진을 볼수 있습니다.</span>
 	<p><strong>PHOTO</strong></p>
+	<div class="photo_Img" ng-repeat="img in view">	
+		<img ng-src="{{img.img}}" ng-click='imgClick(img.location,img.date)'/>
+		<span class="loc"><center><strong>{{img.location}}</strong></center></span>
+		<span class="date">{{img.date}}</span>
+	</div>
 </div>
 </body>
-</html>

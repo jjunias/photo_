@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var PhotoSchema = new Schema({
-    catalog: String,
-    data: String,
+    location: String,
+    date: String,
+    number:Number,
     img: String
 });
 
