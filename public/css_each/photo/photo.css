@@ -42,3 +42,47 @@
 	float:right;
 	margin-top:-25px;
 }
+@media(max-width:1200px){      /* 1200px 이하  적용*/
+	.photo{
+		margin-left:2%;
+		width:100%;
+	}
+}
+@media(max-width:768px){          /* 768 이하 적용*/
+	.photo{
+		margin-left:0;
+		margin-top:110px;
+	}
+	.photo span{
+		position: absolute;
+		top:110px;
+		right:5%;
+		color:grey;
+	}	
+	.photo_Box{
+		margin:25px 0;
+		margin-left:5%;
+		height:300px;
+		width:90%;
+	}
+	.photo >p{
+		font-size:15px;
+		top:70px;
+		left:40%;
+	}
+	.photo_Btn{
+		top:60px;
+		right:3%;
+	}
+	.photo_Txt{
+		position: relative;
+		top:-35%;
+		left:-40%;
+	}
+	.loc{
+	font-size: 14px;
+	}
+	.date{
+		display: none;
+	}
+}

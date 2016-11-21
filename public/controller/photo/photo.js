@@ -12,7 +12,7 @@ myApp.controller("photo",function($scope,$routeParams,$http,$location){
 
   		$location.path('/photo_Img/'+date+'/' + location+'/')
   	}
-    $scope.go = function(path){          //글쓰기 버튼 클릭시 page 이동 
+    $scope.go = function(path){ //글쓰기 버튼 클릭시 page 이동 
     	$location.path(path);
   	};
 });

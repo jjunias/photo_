@@ -26,7 +26,7 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/photo_Img.html',
 		controller:'photo_Img'
 	})
-	.when('/main',{
+	.when('/main',{	
 		templateUrl :'pages/main.html',
 		controller:'main_img'	
 	})

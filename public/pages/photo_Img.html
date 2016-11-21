@@ -1,11 +1,41 @@
-<link rel="stylesheet" href="css_each/photo/photo.css"/>
+<link rel="stylesheet" href="/css_each/photo/photo_Img.css"/>
 <body>
+<style>
+@media(max-width:768px){          /* 768 이하 적용*/
+	.photo{
+		width:100%;
+		margin-left:0;
+		margin-top:110px;
+	}
+	.photo_Img{
+		margin:25px 0;
+		margin-left:5%;
+		width:90%;
+	}
+	.pt{
+		font-size:15px;
+		top:70px;
+		left:40%;
+	}
+	.list_Btn{
+		position:absolute;
+		top:120px;
+		right:4%;
+	}
+	.scope{
+		display: none;
+	}
+}
+</style>
 <div class="photo" ng-controller="photo_Img" data-ng-init="load()">
-	<button class="btn btn-default photo_Btn" ng-click="go('/photo_Upload')">글쓰기</button>
-	<p><strong>{{clickPhoto}}</strong></p>
-	<div ng-repeat="img in view">
-		<img ng-src="{{img.img}}"/>	
+	<p class="pt"><strong>PHOTO</strong></p>
+	<div class="loc">{{location}}</div>
+	<div class="date" >촬영 일자 : {{date}}</div>
+	<div class="clicked">조회수 : {{view[0].clicked}} 회</div>
+	<p class="scope"></p>
+	<button class="btn btn-default list_Btn" ng-click="go()">목록</button>
+	<div class="photo_Img" ng-repeat="view in view">
+		<img ng-src="{{view.img}}"/>	
 	</div>
-	</form>
 </div>
 </body>

@@ -72,6 +72,11 @@
 		margin-left:10% !important;
 		margin:1%;
 	}
+	.wedding >p{
+		font-size:18px;
+		top:100px;
+		left:45%;
+	}
 }
 @media(max-width:768px){          /* 768 이하 적용*/
 	.sub_menu{

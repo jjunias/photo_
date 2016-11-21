@@ -15,10 +15,11 @@ module.exports = function(app,Photo,cloudinary)
 	app.post('/photoUpload', function(req,res){
 		for(i=0;i<req.files.img.length;i++){
 			cloudinary.uploader.upload(req.files.img[i].path,function(result){console.log(result)},
-			{public_id:req.files.img[i].name,width:800,height:500})
+			{public_id:req.files.img[i].name,width:1200,height:750})
 			var photo = new Photo();
 			photo.location = req.body.location;
 			photo.date = req.body.date;
+			photo.clicked = 0;
 			photo.number = i;
 			photo.img = "http://res.cloudinary.com/hmwuqfqmp/image/upload/"+req.files.img[i].name+".jpg";
 			photo.save(function(err){

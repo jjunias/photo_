@@ -5,6 +5,7 @@ var PhotoSchema = new Schema({
     location: String,
     date: String,
     number:Number,
+    clicked:Number,
     img: String
 });
 
