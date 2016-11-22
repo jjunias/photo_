@@ -1,0 +1,14 @@
+.qa_Upload{
+	width: 50%;
+	margin: 0 auto;
+	margin-top:130px;
+}
+#pwd{
+    float:left;
+    width:48%;
+    margin-right:2%;
+}
+#pwd_ok{
+    width:50%;
+}
+/*input file css  끝*/

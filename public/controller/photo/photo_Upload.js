@@ -13,7 +13,7 @@ myApp.controller("photo_Upload",function($scope,$http,$routeParams){
  		}
  		else{
       		$http({
-    	  		url:"/viewUpload",
+    	  		url:"/photo_Upload",
     	  		method:"post",
     	  		data:$scope.viewDate
     	  	}).success(function(){

@@ -1,0 +1,50 @@
+<style>
+.photo{
+	position: left;
+	width:70%;
+	margin-top:150px;
+	margin-left:15%;
+}
+.q{
+	position:absolute;
+	top:120px;
+	left:45%;
+	text-align: center;
+	font-size:25px;
+}
+.write_Btn{
+	position:absolute;
+	top:130px;
+	right:19%;
+}
+.table{
+	margin-top:50px;
+}
+
+</style>
+<body>
+<div class="photo" ng-controller="qa" data-ng-init="load()">
+	<p class="q"><strong>Q & A</strong></p>
+	<button class="btn btn-default write_Btn" ng-click="go('qa_Upload')">글쓰기</button>
+	<table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width:5%">번호</th>
+                    <th style="width:65%"><center>제목</center></th>
+                    <th style="width:10%">작성자</th>
+                    <th style="width:10%">작성일</th>
+                    <th style="width:10%">조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tmp in view | orderBy:'-'">
+                    <td>{{$index}}</td>
+                    <td>{{tmp.title}}</td>
+                    <td>{{tmp.writer}}</td>
+                    <td>{{tmp.date}}</td>
+                    <td>{{tmp.clicked}} 회</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+</body>

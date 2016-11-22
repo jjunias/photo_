@@ -12,7 +12,7 @@ module.exports = function(app,Photo,cloudinary)
               res.json(photos);
     	})
     });
-	app.post('/photoUpload', function(req,res){
+	app.post('/photo_Upload', function(req,res){
 		for(i=0;i<req.files.img.length;i++){
 			cloudinary.uploader.upload(req.files.img[i].path,function(result){console.log(result)},
 			{public_id:req.files.img[i].name,width:1200,height:750})

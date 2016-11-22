@@ -1,7 +1,10 @@
 var myApp = angular.module("myApp",['ngRoute','ngAnimate','slick']);
 myApp.config(function($routeProvider){
 	$routeProvider
-
+	.when('/main',{	
+		templateUrl :'pages/main.html',
+		controller:'main_img'	
+	})
 	.when('/wedding',{
 		templateUrl :'pages/wedding.html',
 		controller :'wedding'
@@ -26,9 +29,13 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/photo_Img.html',
 		controller:'photo_Img'
 	})
-	.when('/main',{	
-		templateUrl :'pages/main.html',
-		controller:'main_img'	
+	.when('/qa',{
+		templateUrl :'pages/qa.html',
+		controller:'qa'
 	})
-	.otherwise({redirectTo:'/main'});
+	.when('/qa_Upload',{
+		templateUrl :'pages/qa_Upload.html',
+		controller:'qa_Upload'
+	})
+	/*.otherwise({redirectTo:'/main'});*/
 });

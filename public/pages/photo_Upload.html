@@ -6,7 +6,7 @@
 <body>
 <div class="photo_Upload" ng-controller="photo_Upload">
   <center><h3>PHOTO 등록 </h3></center>
-    <form action="/photoUpload" name="uploadForm" method="post" ng-submit="photoWriteForm($event)" enctype="multipart/form-data" novalidate>
+    <form action="/photo_Upload" name="uploadForm" method="post" ng-submit="photoWriteForm($event)" enctype="multipart/form-data" novalidate>
         <label for="date" class="sr-only">등록일자</label>
         <input type="text" ng-model="viewDate.date" id="date" name="date" class="sr-only"/>
         <label for="location" class="sr-only">촬영지</label>
