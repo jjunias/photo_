@@ -1,5 +1,5 @@
 .photo_Upload{
-  width:80%;
+  width:50%;
   margin: 0 auto;
   margin-top:130px;
 }
@@ -41,4 +41,21 @@
   -webkit-appearance: none; /* 네이티브 외형 감추기 */
   -moz-appearance: none;
   appearance: none;
+}
+.cancle_Btn{
+    float:right;
+    margin-top:1%;
+}
+.ok_Btn{
+    float:right;
+    margin-top:1%;
+    margin-right:1%;
+
+}
+@media(max-width:768px){
+    .photo_Upload{
+    width: 80%;
+    margin: 0 auto;
+    margin-top:130px;
+  }
 }

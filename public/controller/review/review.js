@@ -3,7 +3,7 @@ myApp.controller("review",function($scope,$http,$location){
   $scope.num;
   $scope.load = function($event){
   $http({
-    url:"/viewLoad",
+    url:"/view_Load",
     method:"get"
     }).success(function(data){
       $scope.view = data;

@@ -44,3 +44,19 @@
   appearance: none;
 }
 /*input file css  끝*/
+.cancle_Btn{
+    float:right;
+    margin-top:1%;
+}
+.ok_Btn{
+    float:right;
+    margin-top:1%;
+    margin-right:1%;
+}
+@media(max-width:768px){
+    .review_Upload{
+    width: 80%;
+    margin: 0 auto;
+    margin-top:130px;
+  }
+}

@@ -6,7 +6,7 @@
 <body>
 <div class="review_Upload" ng-controller="review_Upload">
 	<center><h3>REVIEW 글 등록 </h3></center>
-		<form action="/viewUpload" name="uploadForm" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data" novalidate>
+		<form action="/view_Upload" name="uploadForm" method="post" ng-submit="viewWriteForm($event)" enctype="multipart/form-data" novalidate>
 			<div class="form-group has-feedback">
 				<label for="name" class="sr-only">이름</label>
 				<input type="text" ng-model="viewDate.name" id="name" name="name" placeholder="이름 입력:" class="form-control" ng-required="true"
@@ -25,8 +25,8 @@
 				<textarea ng-model="viewDate.content" name="content" id="content" cols="50" rows="20" class="form-control" 
 				placeholder="간단한 인사말 을 적어주세요 20자 이내 ." style="resize:none;" ng-required="true">	
 				</textarea>
-				<button class="btn btn-success" type="submit">확인</button>
-				<button type="button" class="btn btn-danger">취소</button>
+				<button type="button" class="btn btn-danger cancle_Btn">취소</button>
+                <button class="btn btn-success ok_Btn" type="submit">확인</button>
 			</div>
 		</form>			
 	</div>

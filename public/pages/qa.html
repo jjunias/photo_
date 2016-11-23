@@ -1,8 +1,8 @@
 <style>
-.photo{
+.qa{
 	position: left;
 	width:70%;
-	margin-top:150px;
+	margin-top:200px;
 	margin-left:15%;
 }
 .q{
@@ -20,10 +20,53 @@
 .table{
 	margin-top:50px;
 }
+@media(max-width:768px){          /* 768 이하 적용*/
+    .qa{
+        width:100%;
+        margin-left:0;
+        margin-top:110px;
+    }
+    .qa span{
+        position: absolute;
+        top:110px;
+        right:5%;
+        color:grey;
+    }   
+    .review_ImgBox{
+        margin:25px 0;
+        margin-left:10%;
+        height:80%;
+        width:80%;
+    }
+    .q{
+        font-size:15px;
+        top:70px;
+        left:40%;
+    }
+    .write_Btn{
+        top:60px;
+        right:3%;
+    }
+    .view_Img{
+    position:fixed;
+    top:4%;
+    left:5%;
+    width:90%;
+    height:85%;
+    display: none;
+    }
+    .modal_Img{
+        height:80%;
+    }
+    .modal_Txt{
+        height:20%;
+    }
+}
+
 
 </style>
 <body>
-<div class="photo" ng-controller="qa" data-ng-init="load()">
+<div class="qa" ng-controller="qa" data-ng-init="load()">
 	<p class="q"><strong>Q & A</strong></p>
 	<button class="btn btn-default write_Btn" ng-click="go('qa_Upload')">글쓰기</button>
 	<table class="table table-striped">
@@ -38,7 +81,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="tmp in view | orderBy:'-'">
-                    <td>{{$index}}</td>
+                    <td>{{tmp.number}}</td>
                     <td>{{tmp.title}}</td>
                     <td>{{tmp.writer}}</td>
                     <td>{{tmp.date}}</td>

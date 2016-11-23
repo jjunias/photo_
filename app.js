@@ -33,7 +33,7 @@ var User = require('./models/user');
 var View = require('./models/view');
 var Photo = require('./models/photo');
 var Qa = require('./models/qa');
-
+var Counter = require('./models/counter')
 // [CONFIGURE APP TO USE bodyParser]
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -46,7 +46,7 @@ var port = process.env.PORT || 7000;
 var user_Router = require('./routes/user')(app,User);
 var view_Router = require('./routes/view')(app,View,cloudinary);
 var photo_Router = require('./routes/photo')(app,Photo,cloudinary);
-var qa_Router = require('./routes/qa')(app,Qa);
+var qa_Router = require('./routes/qa')(app,Counter,Qa,db);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)

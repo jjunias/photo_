@@ -1,13 +1,13 @@
     module.exports = function(app,View,cloudinary)
 {
-	app.get('/viewLoad', function(req,res){
+	app.get('/view_Load', function(req,res){
         View.find(function(err, views){
             if(err) return res.status(500).send({error: 'database failure'});
               res.json(views);
         })
     });
 
-	app.post('/viewUpload', function(req, res){
+	app.post('/view_Upload', function(req, res){
 		cloudinary.uploader.upload(req.files.img.path,function(result) {
     	console.log(result)},{public_id:req.files.img.name,width:600,height:900})	
     	var view = new View();

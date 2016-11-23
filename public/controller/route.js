@@ -34,8 +34,8 @@ myApp.config(function($routeProvider){
 		controller:'qa'
 	})
 	.when('/qa_Upload',{
-		templateUrl :'pages/qa_Upload.html',
+		templateUrl :'pages/qa_Upload.html',	
 		controller:'qa_Upload'
 	})
-	/*.otherwise({redirectTo:'/main'});*/
+	.otherwise({redirectTo:'/main'});
 });

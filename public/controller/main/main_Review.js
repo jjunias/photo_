@@ -3,7 +3,7 @@ myApp.controller("main_Review",function($scope,$http,$location){  //review 컨�
   	$scope.main_view = {}; //get 마지막 6개만 추출
   	$scope.load = function($event){
   		$http({
-  			url:"/viewLoad",
+  			url:"/view_Load",
   			method:"get"
   		}).success(function(data){
   			  $scope.view = data;

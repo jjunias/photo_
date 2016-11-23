@@ -11,15 +11,7 @@ myApp.controller("photo_Upload",function($scope,$http,$routeParams){
       		alert("파일을 선택 해주세요.");
       		$event.preventDefault();
  		}
- 		else{
-      		$http({
-    	  		url:"/photo_Upload",
-    	  		method:"post",
-    	  		data:$scope.viewDate
-    	  	}).success(function(){
-    	  	});
-    	}
-   	}
+   }
 	angular.element(function(){              // input file css 기능 script
 		var now = new Date();
 		$scope.viewDate.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();

@@ -24,15 +24,7 @@ myApp.controller("review_Upload",function($scope,$http,$location){  //review 컨
       alert("인사말을 적어주세요");
        $event.preventDefault();
     }
-    else{
-      $http({
-    	  		url:"/viewUpload",
-    	  		method:"post",
-    	  		data:$scope.viewDate
-    	  	}).success(function(){
-    	  	});
-    	}
-    };
+  };
 	angular.element(function(){              // input file css 기능 script
 		var fileTarget = $('.filebox .upload-hidden');
     	fileTarget.on('change', function(){  // 값이 변경되면

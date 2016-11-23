@@ -1,5 +1,40 @@
 myApp.controller("qa_Upload",function($scope,$routeParams,$http,$location){
 	$scope.viewDate={};
+	$scope.QaUploadForm = function($event){ 
+	    var reg_Writer = /^[a-zA-Z가-힣\s]{1,10}$/;
+	    var result_Writer = reg_Writer.test($('#writer').val());
+	    var reg_Pwd = /^(?=.*[a-zA-Z])(?=.*\d).{8,12}$/;
+	    var result_Pwd = reg_Pwd.test($('#pwd').val());
+	    var reg_Title = /^[\w\W]{1,15}$/;
+	    var result_Title = reg_Title.test($("#title").val());
+	    
+	    if(!result_Writer){
+	     	alert("작성자를 적어주세요.");
+	     	$event.preventDefault(); 
+	    }
+	    else if(!result_Pwd){
+			alert("비밀번호를 올바르게 입력하세요..");
+	     	$event.preventDefault(); 
+	    }
+	    else if(!($("#pwd").val() == $("#pwd_ok").val())){
+	    	alert("입력하신 비밀번호가 서로 다릅니다.")
+	    	$event.preventDefault();
+	    }
+	    else if(!result_Title){
+	    	alert("제목을 입력해주세요.");
+	    	$event.preventDefault();	
+	    }
+	    else{
+	    	$http({
+    	  		url:"/qa_Upload",
+    	  		method:"post",
+    	  		data:$scope.viewDate
+    	  	}).success(function(){
+    	  		alert("게시글이 등록 되었습니다.");
+    	  		$location.path('qa');
+    	  	});
+	    }
+	};
 	angular.element(function(){
 		var now = new Date();
 		$scope.viewDate.date =now.getFullYear()+ "-"+(now.getMonth()+1)+
