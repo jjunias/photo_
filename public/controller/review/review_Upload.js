@@ -1,6 +1,5 @@
 myApp.controller("review_Upload",function($scope,$http,$location){  //review 컨트롤러 기능
-	$scope.viewDate ={}; //post 사용 시 값보냄
-	$scope.viewWriteForm = function($event){ 
+	$scope.submit = function($event){ 
     var reg_Name = /^[a-zA-Z가-힣\s]{1,15}$/;
     var result_Name = reg_Name.test($('#name').val());
     var reg_age = /^[1-9][0-9]{0,2}$/;

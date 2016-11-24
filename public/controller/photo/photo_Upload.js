@@ -1,6 +1,5 @@
 myApp.controller("photo_Upload",function($scope,$http,$routeParams){
-	$scope.viewDate ={};
-    $scope.photoWriteForm = function($event){
+    $scope.submit = function($event){
     	var reg_Loc = /^[a-zA-Z가-힣0-9\s]{1,10}$/;
    		var result_Loc = reg_Loc.test($('#location').val());
     	if(!result_Loc){
@@ -11,7 +10,7 @@ myApp.controller("photo_Upload",function($scope,$http,$routeParams){
       		alert("파일을 선택 해주세요.");
       		$event.preventDefault();
  		}
-   }
+   }    
 	angular.element(function(){              // input file css 기능 script
 		var now = new Date();
 		$scope.viewDate.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();

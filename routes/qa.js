@@ -8,7 +8,6 @@ module.exports = function(app,Counter,Qa,db)
 
     });
 	app.post('/qa_Upload', function(req,res){
-		console.log("test !!!!!!1");
 		getNextSequence("qaSequence");
 		function getNextSequence(index) {
 	   		db.collection("counters").update({_id:index},{$inc:{seq:1}});

@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<div class="photo_Upload" ng-controller="photo_Upload">
+<div class="photo_Upload">
   <center><h3>PHOTO 등록 </h3></center>
-    <form action="/photo_Upload" name="uploadForm" method="post" ng-submit="photoWriteForm($event)" enctype="multipart/form-data" novalidate>
+    <form action="/photo_Upload" name="uploadForm" method="post" ng-submit="submit($event)" enctype="multipart/form-data" novalidate>
         <label for="date" class="sr-only">등록일자</label>
-        <input type="text" ng-model="viewDate.date" id="date" name="date" class="sr-only"/>
+        <input type="text" ng-model="date" id="date" name="date" class="sr-only"/>
         <label for="location" class="sr-only">촬영지</label>
-        <input type="text" ng-model="viewDate.location" id="location" name="location" placeholder="촬영지 입력" class="form-control" ng-required="true"
+        <input type="text" ng-model="location" id="location" name="location" placeholder="촬영지 입력" class="form-control" ng-required="true"
           pattern="[a-zA-Z가-힣0-9\s]{1,10}$"/>
         <p class="help-block" ng-show="uploadForm.location.$invalid">촬영지 입력하세요(영문 대소문자,한글,숫자  10자 이내)</p><br/>
         <div class="filebox">
           <label for="ex_filename">업로드</label>
           <input type="file" multiple="multiple" id="ex_filename" accept=".gif,.jpg,.png" name="img[]" class="upload-hidden"/>
         </div>
-        <textarea cols="50" rows="20" id="upload_" class="form-control upload-name" placeholder="파일을 선택해주세요." style="resize:none;"/>
+        <textarea cols="50" rows="10" id="upload_" class="form-control upload-name" placeholder="파일을 선택해주세요." style="resize:none;"/>
         </textarea>
         <button type="button" class="btn btn-danger cancle_Btn">취소</button>
         <button class="btn btn-success ok_Btn" type="submit">확인</button>

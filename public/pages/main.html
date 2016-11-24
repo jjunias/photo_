@@ -3,14 +3,14 @@
 <link rel="stylesheet" href="/css_each/main/main_Review.css"/><!--review 영역 css -->
 <link rel="stylesheet" href="/css_each/main/main_Photo.css"/><!-- photo 영역 css -->
 
-<div name="main_img" class="main" ng-controller ="main_img">   <!--main img 시작-->
+<div name="main_img" class="main">   <!--main img 시작-->
 	<slick infinite=true slides-to-show=1 slides-to-scroll=1 autoplay=true>
 			<div class="mainImg_Box" ng-repeat="img in img">
 				<img ng-src="{{img}}"/>
 			</div>
 	</slick>
 </div> <!--main img 끝-->
-<div class="wedding" ng-controller="main_Wedding"> <!--wedding 시작-->
+<div class="wedding"> <!--wedding 시작-->
 	<div class="weddingTxt">
 		<p id="wedding">WEDDING</p>
 	</div>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 </div><!--wedding 끝-->
-<div class="review" ng-controller="main_Review" data-ng-init="load()"> <!--review 시작-->
+<div class="review" data-ng-init="load()"> <!--review 시작-->
 	<div class="reviewTxt">
 		<p id="view">REVIEW</p>
 	</div>
@@ -54,7 +54,7 @@
 		</div>
 	</div>
 </div>  <!--review 끝-->
-<div class="photo" ng-controller="main_Photo"> <!--photo 시작-->
+<div class="photo"> <!--photo 시작-->
 	<div class="photoTxt">
 		<p id="photo">PHOTO</p>
 	</div>
