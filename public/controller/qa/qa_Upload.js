@@ -25,7 +25,7 @@ myApp.controller("qa_Upload",function($scope,$routeParams,$location){
 	};
 	angular.element(function(){
 		var now = new Date();
-		$scope.viewDate.date =now.getFullYear()+ "-"+(now.getMonth()+1)+
+		$scope.date =now.getFullYear()+ "-"+(now.getMonth()+1)+
 		"-"+now.getDate();
 	});
 });

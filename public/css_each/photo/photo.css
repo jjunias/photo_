@@ -42,6 +42,9 @@
 	float:right;
 	margin-top:-25px;
 }
+img:hover{
+	cursor: pointer;
+}
 @media(max-width:1200px){      /* 1200px 이하  적용*/
 	.photo{
 		margin-left:2%;

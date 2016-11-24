@@ -1,11 +1,9 @@
 myApp.controller("photo_Img",function($scope,$http,$routeParams){
-  
-  $scope.clicked;
+
   $scope.location=$routeParams.location;
-  $scope.view={};
   $scope.date = $routeParams.date;
   $scope.viewDate = {'date':$scope.date,'location':$scope.location};
-  
+  $scope.view={};
   $scope.load = function($event){
     $http({
       url:"/photo_Img",
@@ -15,7 +13,4 @@ myApp.controller("photo_Img",function($scope,$http,$routeParams){
       $scope.view = data;
     });
   }
-  angular.element(function(){
-
-  });
 });

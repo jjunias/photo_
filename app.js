@@ -44,8 +44,8 @@ var port = process.env.PORT || 7000;
 
 // [CONFIGURE ROUTER]
 var user_Router = require('./routes/user')(app,User);
-var view_Router = require('./routes/view')(app,View,cloudinary);
-var photo_Router = require('./routes/photo')(app,Photo,cloudinary);
+var view_Router = require('./routes/view')(app,View,cloudinary,db);
+var photo_Router = require('./routes/photo')(app,Photo,cloudinary,db);
 var qa_Router = require('./routes/qa')(app,Counter,Qa,db);
 // [RUN SERVER]
 var server = app.listen(port, function(){

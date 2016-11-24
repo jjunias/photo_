@@ -37,5 +37,9 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/qa_Upload.html',	
 		controller:'qa_Upload'
 	})
+	.when('/qa_Write/:id',{
+		templateUrl :'pages/qa_Write.html',
+		controller:'qa_Write'
+	})
 	.otherwise({redirectTo:'/main'});
 });

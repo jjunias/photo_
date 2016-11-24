@@ -23,7 +23,7 @@ module.exports = function(app,Counter,Qa,db)
 	        			clicked:0
 	       			});
 	       		});
-		}
+		}res.redirect('/#/qa');
         /*db.collection("counters").insert({      //시퀀스 하기전 생성
         	_id: "qaSequence",
         	name:"qaSequence",

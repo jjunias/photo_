@@ -19,6 +19,9 @@
 .table{
 	margin-top:50px;
 }
+.title{
+    cursor: pointer;
+}
 @media(max-width:768px){          /* 768 이하 적용*/
     .qa{
         width:100%;
