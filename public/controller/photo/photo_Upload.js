@@ -13,7 +13,7 @@ myApp.controller("photo_Upload",function($scope,$http,$routeParams){
    }    
 	angular.element(function(){              // input file css 기능 script
 		var now = new Date();
-		$scope.viewDate.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();
+		$scope.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();
 		var fileTarget = $('.filebox .upload-hidden');
 		var name = "";
     	fileTarget.on('change', function(){  // 값이 변경되면
