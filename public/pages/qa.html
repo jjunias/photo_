@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="css_each/qa/qa.css"/>
-<body>
 <div class="qa" data-ng-init="load()">
 	<p class="q"><strong>Q & A</strong></p>
 	<button class="btn btn-default write_Btn" ng-click="go('qa_Upload')">글쓰기</button>
@@ -13,10 +12,10 @@
                     <th style="width:15%">조회수</th>
                 </tr>
             </thead>
-            <tbody> 
+            <tbody>
                 <tr ng-repeat="tmp in view | orderBy:'-'">
                     <td>{{tmp.number}}</td>
-                    <td class="title" ng-click="qaClick(tmp._id)">{{tmp.title}}</td>
+                    <td class="title" ng-click="qaClick(tmp.number)">{{tmp.title}}</td>
                     <td>{{tmp.writer}}</td>
                     <td>{{tmp.date}}</td>
                     <td>{{tmp.clicked}}회</td>
@@ -24,4 +23,3 @@
             </tbody>
         </table>
 </div>
-</body>

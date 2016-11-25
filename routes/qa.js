@@ -1,11 +1,19 @@
 module.exports = function(app,Counter,Qa,db)
 {
 	app.get('/qa_View', function(req,res){
-        Qa.find({},{pwd:false},function(err, qas){
+        Qa.find({},{pwd:false,_id:false,content:false},function(err, qas){
             if(err) return res.status(500).send({error: 'database failure'});
               res.json(qas);
         });
 
+    });
+    app.post('/qa_Write',function(req,res){
+    	db.collection("qas").update({number:Number(req.body.num)},{$inc:{clicked:1}});
+    	Qa.findOne({number:req.body.num},{pwd:false},function(err,qas){
+    		if(err) return res.status(500).send({error: 'database failure'});
+    		res.json(qas);
+    		console.log(qas);
+    	});
     });
 	app.post('/qa_Upload', function(req,res){
 		getNextSequence("qaSequence");

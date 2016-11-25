@@ -37,7 +37,7 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/qa_Upload.html',	
 		controller:'qa_Upload'
 	})
-	.when('/qa_Write/:id',{
+	.when('/qa_Write/:number',{
 		templateUrl :'pages/qa_Write.html',
 		controller:'qa_Write'
 	})

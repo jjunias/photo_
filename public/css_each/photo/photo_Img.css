@@ -1,8 +1,8 @@
 .photo{
 	position: left;
-	width:70%;
+	width:60%;
 	margin-top:150px;
-	margin-left:15%;
+	margin-left:20%;
 }
 .pt{
 	position:absolute;
@@ -26,8 +26,8 @@
 }
 .scope{
 	position:absolute;
-	left:15%;
-	width:70%;
+	left:20%;
+	width:60%;
 	background-color: red;
 	border-top:1px solid grey;
 }
