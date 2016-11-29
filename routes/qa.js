@@ -4,7 +4,7 @@ module.exports = function(app,Counter,Qa,db)
         Qa.find({},{pwd:false,_id:false,content:false},function(err, qas){
             if(err) return res.status(500).send({error: 'database failure'});
               res.json(qas);
-        });
+        }).sort({number:-1});
 
     });
     app.post('/qa_Write',function(req,res){

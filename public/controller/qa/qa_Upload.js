@@ -1,4 +1,7 @@
 myApp.controller("qa_Upload",function($scope,$routeParams,$location){
+	$scope.go = function(path){ //글쓰기 버튼 클릭시 page 이동 
+    	$location.path(path);
+  	};
 	$scope.submit = function($event){ 
 	    var reg_Writer = /^[a-zA-Z가-힣\s]{1,10}$/;
 	    var result_Writer = reg_Writer.test($('#writer').val());
@@ -25,7 +28,7 @@ myApp.controller("qa_Upload",function($scope,$routeParams,$location){
 	};
 	angular.element(function(){
 		var now = new Date();
-		$scope.date =now.getFullYear()+ "-"+(now.getMonth()+1)+
+		$scope.date =now.getFullYear().toString().substr(2,2)+ "-"+(now.getMonth()+1)+
 		"-"+now.getDate();
 	});
 });

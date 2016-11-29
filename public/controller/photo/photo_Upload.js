@@ -1,16 +1,19 @@
-myApp.controller("photo_Upload",function($scope,$http,$routeParams){
-    $scope.submit = function($event){
+myApp.controller("photo_Upload",function($scope,$http,$routeParams,$location){
+  $scope.go = function(path){ //글쓰기 버튼 클릭시 page 이동 
+    $location.path(path);
+  };
+  $scope.submit = function($event){
     	var reg_Loc = /^[a-zA-Z가-힣0-9\s]{1,10}$/;
    		var result_Loc = reg_Loc.test($('#location').val());
     	if(!result_Loc){
-      		alert("촬영지를 입력해주세요.");
-      		$event.preventDefault(); 
+      	alert("촬영지를 입력해주세요.");
+      	$event.preventDefault(); 
    		}
    		else if($("#upload_").val()==""){
-      		alert("파일을 선택 해주세요.");
-      		$event.preventDefault();
- 		}
-   }    
+      	alert("파일을 선택 해주세요.");
+      	$event.preventDefault();
+ 		  }
+  }    
 	angular.element(function(){              // input file css 기능 script
 		var now = new Date();
 		$scope.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();
