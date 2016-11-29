@@ -22,6 +22,20 @@
 .title{
     cursor: pointer;
 }
+#pagination-demo{
+    margin-left:35%;
+}
+.page-link{
+    background-color: white;
+    color:black !important;
+}
+.active>a:focus , .active>a:hover , .active>a{
+    background-color: grey !important;
+    color:white !important;
+}
+.page-item{
+    margin: 0;
+}
 @media(max-width:768px){          /* 768 이하 적용*/
     .qa{
         width:100%;

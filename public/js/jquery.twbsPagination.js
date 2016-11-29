@@ -309,8 +309,8 @@
         totalPagesVariable: '{{total_pages}}',
         page: null,
         first: 'First',
-        prev: 'Previous',
-        next: 'Next',
+        /*prev: 'Previous',
+        next: 'Next',*/
         last: 'Last',
         loop: false,
         onPageClick: null,

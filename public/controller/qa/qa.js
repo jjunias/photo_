@@ -14,29 +14,30 @@ myApp.controller("qa",function($scope,$routeParams,$http,$location){
     	method:"get"
     	}).success(function(data){
       	$scope.view = data;
-      angular.element($('#pagination-demo').twbsPagination({
-          totalPages: Math.ceil(($scope.view.length / 5)),
-          visiblePages:5,
-          onPageClick: function (event, page) {
-            endNum = page * 5;
-            startNum = endNum - 5; 
-           for(i=startNum;i<endNum;i++){
-              
-              if($scope.view[i] == undefined){
-                  delete $scope.views[j];
-              }else{
-                $scope.views[j] = $scope.view[i];
+        angular.element($('#pagination-demo').twbsPagination({
+            totalPages: Math.ceil(($scope.view.length / 10)),
+            visiblePages:5,
+            onPageClick: function (event, page) {
+              endNum = page * 10;
+              startNum = endNum - 10; 
+              for(i=startNum;i<endNum;i++){
+                
+                if($scope.view[i] == undefined){
+                    delete $scope.views[j];
+                }else{
+                  $scope.views[j] = $scope.view[i];
+                }
+                j++;  if(j>9){j=0}
+                if ($scope.$$phase == '$apply' || $scope.$$phase == '$digest' ){
+                  $scope.test = true;
+                }else{
+                  $scope.$apply(function() {
+                    $scope.test = true;
+                  });
+                }
               }
-              
-              j++;
-              if(j>4){
-                j=0;              
-              }
-              $scope.$apply();
-           }
-
-          }
-      }));
+            }
+        }));
       });
   	};
 }); 
