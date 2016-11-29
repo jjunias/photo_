@@ -12,7 +12,6 @@ module.exports = function(app,Counter,Qa,db)
     	Qa.findOne({number:req.body.num},{pwd:false},function(err,qas){
     		if(err) return res.status(500).send({error: 'database failure'});
     		res.json(qas);
-    		console.log(qas);
     	});
     });
 	app.post('/qa_Upload', function(req,res){

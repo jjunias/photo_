@@ -15,7 +15,6 @@ module.exports = function(app,Photo,cloudinary,db)
 
     });
 	app.post('/photo_Upload', function(req,res){    // 글쓰기 클릭시 db에 저장
-		console.log("hi");
 		for(i=0;i<req.files.img.length;i++){
 			cloudinary.uploader.upload(req.files.img[i].path,function(result){console.log(result)},
 			{public_id:req.files.img[i].name,width:1200,height:750})

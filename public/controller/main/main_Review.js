@@ -12,7 +12,7 @@ myApp.controller("main_Review",function($scope,$http,$location){  //review ì»¨íŠ
   				if(i<0){
   					break;
   				}
-  		  		$scope.main_view[i] = $scope.view[i]; 	
+  		  		$scope.main_view[i] = $scope.view[i];
   		  	}
   		});
   	};
