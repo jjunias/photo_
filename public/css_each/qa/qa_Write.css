@@ -36,7 +36,68 @@ textarea{
 textarea:hover,textarea:focus{
 	outline: none;
 }
+.btn-warning{
+	float:right;
+	margin-top: 5px;
+}
+.btn-danger{
+	float:right;
+		margin-top: 5px;
+	margin-left:2%;
+}
+.Modal{
+	position: absolute;
+	background-color: white;
+	top:25%;
+	left:35%;
+	width:30%;
+	height:100px;
+	border:1px solid black;
+	display: none;
+}
+.delete_Top{
+	width:100%;
+	height:25%;
+	background-color:#F15F5F;
+}
+.update_Top{
+	width:100%;
+	height:25%;
+	background-color:#F2CB61;
+}
+.delete_Top>p,.update_Top>p{
+	color:white;
+	float:right;
+	margin-right:5px;
+	font-style:border;
+}
+.delete_Top p:hover , .update_Top p:hover{
+	cursor:pointer;
+}
+.Modal > p{
+	text-align: center;
+}
+.Modal > input{
+	margin-left: 25%;
+	height:30px;
+}
+.Modal > button{
+	height:30px;
+}
+@media(max-width:1200px){
+	.Modal{
+		left:25%;
+		width:50%;
+	}
+}
 @media (max-width:768px){
+	.Modal{
+		left:5%;
+		width:90%;
+	}
+	.btn-danger{
+		margin-right:5%;
+	}
 	.write_Btn{
 		position:absolute;
 		top:120px;
