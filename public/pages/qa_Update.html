@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css_each/qa/qa_Upload.css"/>
+<div class="qa_Upload" data-ng-init="load()">
+    <center><h3>Q & A 글 수정 </h3></center>
+        <form action="/qa_Upload" name="uploadForm" method="post" enctype="multipart/form-data" novalidate>
+            <div class="form-group has-feedback">
+
+                <label for="writer" class="sr-only">작성자</label>
+                <input type="text" ng-model="writer" id="writer" name="writer" placeholder="작 성 자" class="form-control" ng-required="true"
+                    pattern="[a-zA-Z가-힣\s]{1,10}$"/>
+                <p class="help-block">작성자를 입력하세요(영문 대소문자, 한글 10자 이내)</p><br/>
+                <p></p>
+                <label for="title" class="sr-only">제목</label>
+                <input type="text" ng-model="title" id="title" name="title" placeholder="제 목" class="form-control" ng-required="true"
+                    pattern="^[\w\W]{1,15}$"/>
+                <p class="help-block">제목을 입력하세요(15자 이내)</p><br/>
+                <label for="content" class="sr-only">내용</label><br/>
+                <textarea ng-model="content" name="content" id="content" cols="50" rows="10" class="form-control" 
+                style="resize:none;" ng-required="true"> 
+                </textarea>
+                <button type="button" class="btn btn-danger cancle_Btn" ng-click="go('qa_Write')">취소</button>
+                <button type="button" class="btn btn-warning ok_Btn" ng-click="update()">수정</button>
+            </div>
+        </form>         
+    </div>
+</div>  

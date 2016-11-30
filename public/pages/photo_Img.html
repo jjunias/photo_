@@ -1,12 +1,19 @@
 <link rel="stylesheet" href="/css_each/photo/photo_Img.css"/>
+<style>
+.delete_Btn{
+	float: right;
+	margin-right:5%;
+}
+</style>
 <div class="photo"  data-ng-init="load()">
 	<p class="pt"><strong>PHOTO</strong></p>
-	<div class="loc">{{location}}</div>
-	<div class="date" >촬영 일자 : {{date}}</div>
+	<div class="loc">{{view[0].location}}</div>
+	<div class="date" >촬영 일자 : {{view[0].date}}</div>
 	<div class="clicked">조회수 : {{view[0].clicked}} 회</div>
 	<p class="scope"></p>
 	<button class="btn btn-default list_Btn" ng-click="go('photo')">목록</button>
 	<div class="photo_Img" ng-repeat="view in view">
 		<img ng-src="{{view.img}}"/>	
 	</div>
+	<button class="btn btn-danger delete_Btn" ng-click="delete(view[0].number)">삭제</button>
 </div>

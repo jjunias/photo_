@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css_each/photo/photo.css"/>
+<link rel="stylesheet" href="/css_each/photo/photo.css"/>
 <div class="photo"  data-ng-init="load()">
 	<button class="btn btn-default photo_Btn" ng-click="go('/photo_Upload')">글쓰기</button>
 	<span>※ 사진을 click 하면 더 많은 사진을 볼수 있습니다.</span>
@@ -6,7 +6,7 @@
 	
 	<div class="photo_Box" ng-repeat="img in view">
 		<div class="photo_Img">	
-			<img ng-src="{{img.img}}" ng-click='imgClick(img.location,img.date)'/>
+			<img ng-src="{{img.img}}" ng-click='imgClick(img.number)'/>
 		<div class="photo_Txt">
 			<span class="loc"><center><strong>{{img.location}}</strong></center></span>
 			<span class="date">조회수:{{img.clicked}}회</span>	

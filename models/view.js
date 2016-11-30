@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var viewSchema = new Schema({
     name: String,
+    number:Number,
     age: String,
     img: String,
     content: String

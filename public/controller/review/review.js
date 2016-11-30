@@ -13,12 +13,12 @@ myApp.controller("review",function($scope,$http,$location){
     $(".view_Img").show();
     $(".dim").show();
     for(i=0;i<$scope.view.length;i++){
-      if(index == $scope.view[i]._id){
+      if(index == $scope.view[i].number){
         $(".modal_Img img").attr("src",$scope.view[i].img);
         $(".modalName").text("이름 :"+$scope.view[i].name);
         $(".modalAge").text("나이 :"+$scope.view[i].age+"세");
         $(".modalContent").text("인사말 :"+$scope.view[i].content);
-        $scope.num = i;
+        $scope.num = $scope.view[i].number;
       }
     }
   };
@@ -42,6 +42,18 @@ myApp.controller("review",function($scope,$http,$location){
     $(".modalAge").text("나이 :"+$scope.view[$scope.num].age+"세");
     $(".modalContent").text("인사말 :"+$scope.view[$scope.num].content);
   };
+  $scope.delete = function(index,$event){
+    var del =confirm("게시물을 삭제하시겠습니까?");
+    if(del){
+    $http({
+        url:"/view_Delete/"+index,
+        method:"delete"
+      }).success(function(data){
+        alert("삭제되었습니다.");
+        location.reload(true);
+      });
+    }
+  }
   $scope.exit = function(){
     $(".view_Img").hide();
     $(".dim").hide();

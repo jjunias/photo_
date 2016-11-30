@@ -4,13 +4,12 @@
 	<p><strong>REVIEW</strong></p>
 	<span>※ 사진을 click 하면 간단한 소개가 나옵니다.</span>
 	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index">
-		<div class="review_Img" ng-click="modal(tmp._id)">
-			<img src="{{tmp.img}}"/>
+		<div class="review_Img" ng-click="modal(tmp.number)">
+			<img ng-src="{{tmp.img}}"/>
 		</div>
 	</div>
 	<div class="view_Img">
-		<button class="btn btn-warning">수정</button>
-		<button class="btn btn-danger">삭제</button>
+		<button class="btn btn-danger" ng-click="delete(num)">삭제</button>
 		<button class="btn btn-default modal_Exit" ng-click="exit()"><strong>x</strong></button>
 		<div class="modal_Img">
 			<img ng-src=""/>

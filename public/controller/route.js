@@ -25,7 +25,7 @@ myApp.config(function($routeProvider){
 		templateUrl :'pages/photo_Upload.html',
 		controller:'photo_Upload'
 	})
-	.when('/photo_Img/:date/:location',{
+	.when('/photo_Img/:number',{
 		templateUrl :'pages/photo_Img.html',
 		controller:'photo_Img'
 	})
@@ -40,6 +40,10 @@ myApp.config(function($routeProvider){
 	.when('/qa_Write/:number',{
 		templateUrl :'pages/qa_Write.html',
 		controller:'qa_Write'
+	})
+	.when('/qa_Update/:number',{
+		templateUrl :'pages/qa_update.html',
+		controller:'qa_Update'
 	})
 	.otherwise({redirectTo:'/main'});
 });
