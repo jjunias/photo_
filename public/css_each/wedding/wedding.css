@@ -24,7 +24,7 @@
 }
 .sub_menu >div{
 	font-size:20px;
-	margin-bottom:10px;
+	margin-bottom:15px;
 	color:white;
 }
 .sub_menu >div:hover{
@@ -55,7 +55,7 @@
 	}
 	.sub_menu div{
 		float: left;
-		width:100px;
+		width:33%;
 		font-size:15px;
 	}
 	.wedding{
