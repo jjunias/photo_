@@ -42,7 +42,7 @@ myApp.config(function($routeProvider){
 		controller:'qa_Write'
 	})
 	.when('/qa_Update/:number',{
-		templateUrl :'pages/qa_update.html',
+		templateUrl :'pages/qa_Update.html',
 		controller:'qa_Update'
 	})
 	.otherwise({redirectTo:'/main'});
