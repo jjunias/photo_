@@ -7,10 +7,11 @@
 .sub_menu{
 	position:absolute;
 	padding:10px 0;
-	padding-left:10px;
+	padding-left:15px;
+	margin-left:3%;
 	top: 300px;
 	left:1%;
-	width:170px;
+	width:140px;
 	height:150px;
 	background-color:black;
 	opacity: 0.8;
@@ -45,6 +46,7 @@
 
 @media(max-width:1200px){      /* 1200px 이하  적용*/
 	.sub_menu{
+		margin-left:0;
 		position:relative;
 		top:50px;
 		left:0;

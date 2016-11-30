@@ -7,11 +7,10 @@
 	<div class="photo_Box" ng-repeat="img in view">
 		<div class="photo_Img">	
 			<img ng-src="{{img.img}}" ng-click='imgClick(img.number)'/>
-		<div class="photo_Txt">
-			<span class="loc"><center><strong>{{img.location}}</strong></center></span>
-			<span class="date">조회수:{{img.clicked}}회</span>	
+			<div class="photo_Txt">
+				<span class="loc"><center><strong>{{img.location}}</strong></center></span>
+				<span class="date">조회수:{{img.clicked}}회</span>	
+			</div>
 		</div>
-		</div>
-		
 	</div>
 </div>
