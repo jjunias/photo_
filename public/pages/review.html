@@ -3,8 +3,8 @@
 	<button class="btn btn-default review_Btn" ng-click="go('/review_Upload')">글쓰기</button>
 	<p><strong>REVIEW</strong></p>
 	<span>※ 사진을 click 하면 간단한 소개가 나옵니다.</span>
-	<div class="review_ImgBox" ng-repeat="tmp in view" data-index="$index">
-		<div class="review_Img" ng-click="modal(tmp.number)">
+	<div class="review_ImgBox" ng-repeat="tmp in view">
+		<div class="review_Img" ng-click="modal($index)">
 			<img ng-src="{{tmp.img}}"/>
 		</div>
 	</div>

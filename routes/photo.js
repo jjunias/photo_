@@ -8,11 +8,11 @@ module.exports = function(app,Counter,Photo,cloudinary,db)
     });
     app.post('/photo_Img:number',function(req,res){   //photo.html 에서 img 클릭시 page 이동하면서 내용가져오고 조회수 증가
     	console.log(req);
-    	db.collection('photos').update({number:Number(req.body.number)},{$inc:{clicked:1}});
+    	db.collection('photos').update({number:Number(req.body.number),first:0},{$inc:{clicked:1}});
     	Photo.find({number:Number(req.body.number)},{_id:false},function(err,photos){
     		if(err) return res.status(500).send({error: 'database failure'});
               res.json(photos);
-    	})
+    	}).sort({first:1});
 
     });
 	app.post('/photo_Upload', function(req,res){    // 글쓰기 클릭시 db에 저장

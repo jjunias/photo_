@@ -12,15 +12,11 @@ myApp.controller("review",function($scope,$http,$location){
   $scope.modal =function(index){
     $(".view_Img").show();
     $(".dim").show();
-    for(i=0;i<$scope.view.length;i++){
-      if(index == $scope.view[i].number){
-        $(".modal_Img img").attr("src",$scope.view[i].img);
-        $(".modalName").text("이름 :"+$scope.view[i].name);
-        $(".modalAge").text("나이 :"+$scope.view[i].age+"세");
-        $(".modalContent").text("인사말 :"+$scope.view[i].content);
-        $scope.num = $scope.view[i].number;
-      }
-    }
+    $(".modal_Img img").attr("src",$scope.view[index].img);
+    $(".modalName").text("이름 :"+$scope.view[index].name);
+    $(".modalAge").text("나이 :"+$scope.view[index].age+"세");
+    $(".modalContent").text("인사말 :"+$scope.view[index].content);
+    $scope.num = index;
   };
   $scope.pre = function(){
     if($scope.num <= 0){
@@ -44,9 +40,9 @@ myApp.controller("review",function($scope,$http,$location){
   };
   $scope.delete = function(index,$event){
     var del =confirm("게시물을 삭제하시겠습니까?");
-    if(del){
+  if(del){
     $http({
-        url:"/view_Delete/"+index,
+        url:"/view_Delete/"+$scope.view[index].number,
         method:"delete"
       }).success(function(data){
         alert("삭제되었습니다.");
