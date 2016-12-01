@@ -28,6 +28,8 @@ myApp.controller("qa_Update",function($scope,$routeParams,$location,$http){
 		    	method:"put",
 		    	data:{writer:$scope.writer,title:$scope.title,content:$scope.content}
 		    	}).success(function(data){
+		    		alert("수정되었습니다.");
+		    		$location.path('qa_Write/'+$routeParams.number);
 		    });	   
 	    }
   	}

@@ -13,7 +13,10 @@ myApp.controller("photo_Upload",function($scope,$http,$routeParams,$location){
       	alert("파일을 선택 해주세요.");
       	$event.preventDefault();
  		  }
-  }    
+      else{
+        alert("등록되었습니다.");
+      }
+  };
 	angular.element(function(){              // input file css 기능 script
 		var now = new Date();
 		$scope.date =now.getFullYear()+ "-"+(now.getMonth()+1)+"-"+now.getDate();

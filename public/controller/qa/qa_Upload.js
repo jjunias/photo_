@@ -25,6 +25,9 @@ myApp.controller("qa_Upload",function($scope,$routeParams,$location){
 	    	alert("제목을 입력해주세요.");
 	    	$event.preventDefault();	
 	    }
+	    else{
+	    	alert("등록되었습니다");
+	    }
 	};
 	angular.element(function(){
 		var now = new Date();

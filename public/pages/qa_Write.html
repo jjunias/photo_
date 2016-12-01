@@ -2,13 +2,13 @@
 <div class="update_Modal Modal">
 	<div class="update_Top"><p ng-click="updateHide()">X</p></div>
 	<p>글을 <strong>수정</strong> 하시려면 비밀번호를 입력해주세요.</p>
-	<input type="password" ng-model="updatePwd">
+	<input type="password" ng-model="updatePwd" class="pwdInput">
 	<button class="btn btn-default" ng-click=update(view.number)>확인</button>
 </div>
 <div class="delete_Modal Modal">
 	<div class="delete_Top"><p ng-click="deleteHide()">X</p></div>
 	<p>글을 <strong>삭제</strong> 하시려면 비밀번호를 입력해주세요.</p>
-	<input type="password" ng-model="deletePwd">
+	<input type="password" ng-model="deletePwd" class="pwdInput">
 	<button class="btn btn-default" ng-click=delete(view.number)>확인</button>
 </div>
 <div class="qa" data-ng-init="load()">
