@@ -21,7 +21,6 @@ myApp.controller("qa",function($scope,$routeParams,$http,$location){
               endNum = page * 10;
               startNum = endNum - 10; 
               for(i=startNum;i<endNum;i++){
-                
                 if($scope.view[i] == undefined){
                     delete $scope.views[j];
                 }else{

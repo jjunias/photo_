@@ -21,6 +21,7 @@ db.once('open', function(){
 app.use(express.static(path.join(__dirname, 'public'))); //index페이지 설정
 app.use(multiparty()); //multiparty 사용
 mongoose.connect('mongodb://orstudio:123321@ds139937.mlab.com:39937/orstudio');   //mongolab 연동
+mongoose.Promise = global.Promise;
 //cloudinary 
 cloudinary.config({ 
   cloud_name: 'hmwuqfqmp', 
@@ -32,7 +33,8 @@ cloudinary.config({
 var View = require('./models/view');
 var Photo = require('./models/photo');
 var Qa = require('./models/qa');
-var Counter = require('./models/counter')
+var Counter = require('./models/counter');
+var Reply = require('./models/reply');
 // [CONFIGURE APP TO USE bodyParser]
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -45,7 +47,9 @@ var port = process.env.PORT || 7000;
 var view_Router = require('./routes/view')(app,Counter,View,cloudinary,db);
 var photo_Router = require('./routes/photo')(app,Counter,Photo,cloudinary,db);
 var qa_Router = require('./routes/qa')(app,Counter,Qa,db);
+var reply_Router = require('./routes/reply')(app,Counter,Reply,db);
 // [RUN SERVER]
 var server = app.listen(port, function(){
  console.log("Express server has started on port " + port)
 });
+

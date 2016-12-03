@@ -1,4 +1,5 @@
-x<link rel="stylesheet" href="/css_each/qa/qa_Write.css"/>
+<link rel="stylesheet" href="/css_each/qa/qa_Write.css"/>
+
 <div class="update_Modal Modal">
 	<div class="update_Top"><p ng-click="updateHide()">X</p></div>
 	<p>글을 <strong>수정</strong> 하시려면 비밀번호를 입력해주세요.</p>
@@ -12,6 +13,8 @@ x<link rel="stylesheet" href="/css_each/qa/qa_Write.css"/>
 	<button class="btn btn-default" ng-click=delete(view.number)>확인</button>
 </div>
 <div class="qa" data-ng-init="load()">
+	<button class="btn btn-danger btnTop" ng-click=deleteShow()>삭제</button>
+	<button class="btn btn-warning btnTop" ng-click=updateShow()>수정</button>
 	<p class="q"><strong>Q & A</strong></p>
 	<table>
 		<tr>
@@ -38,8 +41,17 @@ x<link rel="stylesheet" href="/css_each/qa/qa_Write.css"/>
 		</tr>
 	</table>
 	<button class="btn btn-default write_Btn" ng-click="go('qa')">목록</button>
-	<button class="btn btn-danger" ng-click=deleteShow()>삭제</button>
-	<button class="btn btn-warning" ng-click=updateShow()>수정</button>
+	<div class="reply">
+		<textarea class="form-control reply_Txt" ng-model="replyTxt" placeholder="댓글 입력 :" cols="10" rows="1"></textarea>
+		<input class="form-control reply_Id" ng-model="replyId" type="text" placeholder="이름 입력 :"/>
+		<input class="form-control reply_Pwd " ng-model="replyPwd" type="password" placeholder="비밀번호 입력 :"/>
+		<button class="btn btn-default reply_Btn" ng-click=reply()>댓 글</button>
+	</div>
+	<div class="reply" ng-repeat="temp in replyList">
+		<span><strong>　{{temp.id}}</strong> | {{temp.date}}</span>
+		<span class="replyDelete" ng-click="replyDelete($index)">삭제</span>
+		<p>　{{temp.reply}}</p>
+	</div>
 </div>
 
 

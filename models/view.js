@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var viewSchema = new Schema({
+var ViewSchema = new Schema({
     name: String,
     number:Number,
     age: String,
@@ -9,4 +9,4 @@ var viewSchema = new Schema({
     content: String
 });
 
-module.exports = mongoose.model('view', viewSchema);
+module.exports = mongoose.model('view', ViewSchema);
